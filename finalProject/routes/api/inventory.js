@@ -2,7 +2,7 @@ const router = require("express").Router();
 const inventoryController = require("../../controllers/inventoryController");
 
 // Matches with "/api/books"
-router.route("/")
+router.route("/inventory")
   .get(inventoryController.findAll)
   .post(inventoryController.create);
 
