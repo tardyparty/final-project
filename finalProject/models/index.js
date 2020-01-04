@@ -1,3 +1,4 @@
 module.exports = {
-    Book: require("./inventory")
+  Inventory: require("./inventory"),
+  Comment: require("./comment")
   };
