@@ -128,7 +128,7 @@ const inventorySeed = [
     product: "Water Filter",
     description: "Weighing only 2 oz. and sized to fit in the palm of your hand, the Sawyer Mini water filter is one of the lightest, most compact filters available, and you can use it to drink straight from a stream.",
     retail: 19,
-    quantity: 115
+    quantity: 116
   },
   {
     product: "Coffee Percolator",
