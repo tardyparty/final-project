@@ -8,10 +8,18 @@ class Blog extends React.Component {
         return (
             <Container>
                 <Header />
-                
-            
-                    
-                    
+                <Container>
+                    <div className="container-fluid">
+                        <div className="row">
+                            <div className="col-md-12">
+                                <nav className="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark fixed-bottom">
+                                    <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </Container>
             </Container>
         )
     }

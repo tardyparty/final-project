@@ -9,14 +9,13 @@ class Home extends React.Component {
         return (
             <Container>
                 <Header />
-
                 <Container>
                     <Container>
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="row">
-                                    <div class="col-md-4">
+                                        <div class="col-md-3">
                                             <div class="card">
                                                 <h5 class="card-title">
                                                     Basic Car Camper
@@ -29,12 +28,12 @@ class Home extends React.Component {
                                                         Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
 							                        </p>
                                                     <p>
-                                                        <a class="btn btn-primary" href="#">Rent a Package</a> <a class="btn"></a>
+                                                        <a class="btn btn-primary" href="#">Rent Yours Today!</a> <a class="btn"></a>
                                                     </p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-3">
                                             <div class="card">
                                                 <h5 class="card-title">
                                                     Glam/Party Camper
@@ -47,12 +46,12 @@ class Home extends React.Component {
                                                         Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
 							                        </p>
                                                     <p>
-                                                        <a class="btn btn-primary" href="#">Rent a Package</a> <a class="btn"></a>
+                                                        <a class="btn btn-primary" href="#">Rent Yours Today!</a> <a class="btn"></a>
                                                     </p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-3">
                                             <div class="card">
                                                 <h5 class="card-title">
                                                     Couple Campers
@@ -64,12 +63,12 @@ class Home extends React.Component {
                                                         Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
 							                        </p>
                                                     <p>
-                                                        <a class="btn btn-primary" href="#">Find Your Spot</a> <a class="btn"></a>
+                                                        <a class="btn btn-primary" href="#">Rent Yours Today!</a> <a class="btn"></a>
                                                     </p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-3">
                                             <div class="card">
                                                 <h5 class="card-title">
                                                     Solo Camper
@@ -81,7 +80,7 @@ class Home extends React.Component {
                                                         Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
 							                        </p>
                                                     <p>
-                                                        <a class="btn btn-primary" href="#">Ready to Camp</a> <a class="btn"></a>
+                                                        <a class="btn btn-primary" href="#">Rent Yours Today!</a> <a class="btn"></a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -91,10 +90,17 @@ class Home extends React.Component {
                             </div>
                         </div>
                     </Container>
-
-
                     <Container>
-
+                        <div className="container-fluid">
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <nav className="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark fixed-bottom">
+                                        <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
                     </Container>
                 </Container>
             </Container>
