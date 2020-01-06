@@ -6,7 +6,7 @@ function Jumbo() {
   return(
     <Jumbotron>
   <Container className="text-center">
-    <h1>Google Book Search</h1>
+    <h1>Campers</h1>
     <p>
       Search for and Save Books of Interest
     </p>
