@@ -1,1 +1,14 @@
+.d-block {
+    padding-top: 90px;
+    height: 400px;
+}
 
+.btn {
+    background-color: #FFD75A !important;
+    color: #406E84 !important;
+}
+
+.btn:hover {
+    background-color: #406E84 !important;
+    color: #FFD75A !important
+}
