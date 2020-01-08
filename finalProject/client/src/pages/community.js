@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "../components/Nav";
 import Footer from "../components/footer";
 import Post from "../components/postForm";
+import Comment from "../components/comment";
 import { Container, Form, Button } from "react-bootstrap";
 
 class Community extends Component {
@@ -19,7 +20,7 @@ class Community extends Component {
                 <Header />
                 <Container>
                     <Post />
-
+                    <Comment comments={this.state.comments}/>
                     <Footer />
                 </Container>
             </div>
