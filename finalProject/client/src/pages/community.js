@@ -19,12 +19,17 @@ class Community extends Component {
             <div>
                 <Header />
                 <Container>
-                    <Post
-                        ID={ID}
-                        author={author}
-                        message={message}
-                        ccomments={comments}
-                    />
+                    <Post />
+                    {this.state.posts.map( post => {
+                        return (
+                            <Post
+                                ID={post.ID}
+                                author={post.author}
+                                message={post.message}
+                                comments={post.comments}
+                            />
+                        )
+                    })}
                     <Comment comments={this.state.comments}/>
                     <Footer />
                 </Container>

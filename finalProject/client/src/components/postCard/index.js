@@ -6,10 +6,10 @@ class PostCard extends Component {
         super(props);
 
         this.state = {
-            id: props.Post._ID,
-            author: props.Post.username,
-            message: props.Post.message,
-            comments: props.Post.comments
+            id: props.ID,
+            author: props.username,
+            message: props.message,
+            comments: [ props.comments ]
         }
     }
 
@@ -22,7 +22,11 @@ class PostCard extends Component {
                 <Card.Body>
                     <h1>{ props.Post.message }</h1>
                     <Container>
-                        {/* this needs to map each comment in the postDB props.Post.comments */}
+                        {this.state.comments.map( comment => {
+                            <div>
+                                {comment}
+                            </div>
+                        })}
                     </Container>
                 </Card.Body>
             </Card>
