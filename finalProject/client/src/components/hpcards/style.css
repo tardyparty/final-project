@@ -1,4 +1,19 @@
 .container-fluid {
     padding-top: 50px;
+    position: relative;
     
+}
+
+.btn {
+    text-align: center;
+    background-color: #406E84 !important;
+    color: #E9C4A9 !important;
+    top: 20px;
+    bottom: 0px;
+    right: 20px;
+     
+} 
+
+.card-img-top {
+    height: 200px;
 }

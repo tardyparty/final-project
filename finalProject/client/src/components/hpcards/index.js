@@ -4,58 +4,58 @@ import './style.css';
 class HPCards extends React.Component {
     render() {
         return (
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="card border-light">
-                                    <h5 class="card-title">
-                                        Card title
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col-md-12">
+                        <div className="row">
+                            <div className="col-md-4 text-center">
+                                <div className="card border-light">
+                                    <h5 className="card-title">
+                                        Find Your Adventure
                                                 </h5>
-                                    <img class="card-img-top" alt="Bootstrap Thumbnail First" src="/images/HP_packages.jpeg" />
-                                    <div class="card-block">
+                                    <img className="card-img-top" alt="Bootstrap Thumbnail First" src="/images/HP_packages.jpeg" />
+                                    <div className="card-block">
 
 
-                                        <p class="card-text">
-                                            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                                        <p className="card-text">
+                                            We make camping easy again with pre packaged gear based on your needs!
 							                        </p>
                                         <p>
-                                            <a class="btn btn-primary" href="/store">Rent a Package</a>
+                                            <a className="btn btn-primary" href="/store">Rent a Package</a>
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="card border-light">
-                                    <h5 class="card-title">
-                                        Card title
+                            <div className="col-md-4 text-center">
+                                <div className="card border-light">
+                                    <h5 className="card-title">
+                                        Find Your Spot
 							                </h5>
-                                    <img class="card-img-top" alt="Bootstrap Thumbnail Second" src="/images/HP_spots.jpeg" />
-                                    <div class="card-block">
+                                    <img className="card-img-top" alt="Bootstrap Thumbnail Second" src="/images/HP_spots.jpeg" />
+                                    <div className="card-block">
 
-                                        <p class="card-text">
-                                            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                                        <p className="card-text">
+                                            Search for campgrounds near your area or find your next getaway!
 							                        </p>
                                         <p>
-                                            <a class="btn btn-primary" href="/search">Find Your Spot</a>
+                                            <a className="btn btn-primary" href="/search">Campsite Search</a>
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="card border-light">
-                                    <h5 class="card-title">
-                                        Card title
+                            <div className="col-md-4 text-center">
+                                <div className="card border-light">
+                                    <h5 className="card-title">
+                                        Find Campers Experiences
 							                </h5>
-                                    <img class="card-img-top" alt="Bootstrap Thumbnail Third" src="/images/HP_camp.jpeg" />
-                                    <div class="card-block">
+                                    <img className="card-img-top" alt="Bootstrap Thumbnail Third" src="/images/HP_camp.jpeg" />
+                                    <div className="card-block">
 
-                                        <p class="card-text">
-                                            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                                        <p className="card-text">
+                                            Read and share a recent camping experience and connect with our community!
 							                        </p>
                                         <p>
-                                            <a class="btn btn-primary" href="#">Ready to Camp</a>
+                                            <a className="btn btn-primary" href="/community">Community</a>
                                         </p>
                                     </div>
                                 </div>

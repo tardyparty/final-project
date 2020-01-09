@@ -7,8 +7,8 @@ class Footer extends React.Component {
         <div className="container-fluid">
             <div className="row">
                 <div className="col-md-12">
-                    <nav className="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark fixed-bottom" id="footer">
-                        <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">Campers Inc.
+                    <nav className="footer navbar-expand-lg navbar-light bg-light navbar-dark bg-dark fixed-bottom" id="footer">
+                        <div className="collapse navbar-collapse" id="footer">Campers Inc.
                         </div>
                     </nav>
                 </div>

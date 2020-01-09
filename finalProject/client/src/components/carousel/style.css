@@ -1,14 +1,25 @@
 .d-block {
-    padding-top: 90px;
+    padding-top: 71px;
     height: 400px;
+    
 }
 
-.btn {
-    background-color: #FFD75A !important;
-    color: #406E84 !important;
+.btn-carousel {
+    text-align: center;
+    background-color: #406E84 !important;
+    color: #E9C4A9 !important;
+    
 }
 
 .btn:hover {
-    background-color: #406E84 !important;
-    color: #FFD75A !important
+    background-color: #E9C4A9 !important;
+    color: #406E84  !important
+}
+
+@media screen and (max-width: 1366px) {
+    .d-block {
+        padding-top: 71px;
+        height: 300px;
+        
+    }
 }
