@@ -19,7 +19,12 @@ class Community extends Component {
             <div>
                 <Header />
                 <Container>
-                    <Post />
+                    <Post
+                        ID={ID}
+                        author={author}
+                        message={message}
+                        ccomments={comments}
+                    />
                     <Comment comments={this.state.comments}/>
                     <Footer />
                 </Container>
