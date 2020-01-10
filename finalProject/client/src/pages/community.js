@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import API from "../utils/API";
 import Header from "../components/Nav";
 import Footer from "../components/footer";
-import Post from "../components/postForm";
-import Comment from "../components/comment";
+import PostForm from "../components/postForm";
+import PostCard from "../components/postCard";
 import { Container, Form, Button } from "react-bootstrap";
 
 class Community extends Component {
@@ -21,8 +21,10 @@ class Community extends Component {
     
     loadPosts = () => {
         API.getPosts()
-            .then( res => this.setState({ posts: res.data }))
-            .catch( err => console.log(err))
+            .then( (res) => this.setState({ posts: res.data }))
+            .catch( (err) => console.log(err));
+        
+        console.log("load posts", this.state.posts);
     }
 
     render() {
@@ -30,18 +32,18 @@ class Community extends Component {
             <div>
                 <Header />
                 <Container>
-                    <Post />
+                    <h1 className="text-center"> Community </h1>
+                    <PostForm />
                     {this.state.posts.map( post => {
                         return (
                             <PostCard
-                                ID={post.ID}
-                                author={post.author}
-                                message={post.message}
-                                comments={post.comments}
+                                id={ post._ID }
+                                username={ post.username }
+                                body={ post.body }
+                                comments={ post.comments }
                             />
                         )
                     })}
-                    <Comment comments={this.state.comments}/>
                     <Footer />
                 </Container>
             </div>

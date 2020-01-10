@@ -6,37 +6,30 @@ class PostCard extends Component {
         super(props);
 
         this.state = {
-            id: props.ID,
-            author: props.username,
-            message: props.message,
+            id: props.id,
+            username: props.username,
+            body: props.body,
             comments: [ props.comments ]
         }
-    }
-
-    componentWillMount() {
-        this.loadComments();
-    }
-    
-    loadComments = () => {
-        API.getComments()
-            .then( res => this.setState({ posts: res.data }))
-            .catch( err => console.log(err))
     }
 
     render() {
         return(
             <Card>
                 <Card.Title>
-                    { props.username}
+                    { this.state.username }
                 </Card.Title>
                 <Card.Body>
-                    <h1>{ props.Post.message }</h1>
+                    <h1>{ this.state.body }</h1>
                     <Container>
-                        {this.state.comments.map( comment => {
-                            <div>
-                                {comment}
-                            </div>
-                        })}
+                        { this.state.comments.map( comment => {
+                            return (
+                                <div>
+                                    <h2> { comment.username } </h2>
+                                    <p> { comment.comment } </p>
+                                </div>
+                            )}
+                        )}
                     </Container>
                 </Card.Body>
             </Card>

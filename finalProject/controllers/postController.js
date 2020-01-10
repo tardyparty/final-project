@@ -22,7 +22,7 @@ module.exports = {
   },
   update: function(req, res) {
     db.Post
-      .update({ _id: req.params.id }, {$push: {comments: {comment: req.body.comment, username: req.body.username}}})
+      .update({ _id: req.params.id }, { $push: { comments: { comment: req.body.comment, username: req.body.username }}})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
