@@ -154,10 +154,54 @@ db.Inventory
   .remove({})
   .then(() => db.Inventory.collection.insertMany(inventorySeed))
   .then(data => {
-    console.log(data.result.n + " records inserted!");
+    console.log(data.result.n + " INVENTORY inserted!");
     process.exit(0);
   })
   .catch(err => {
     console.error(err);
     process.exit(1);
   });
+
+const postSeed = [
+  {
+    username: "tardy",
+    body: "Where should I go camping close to Nashville?",
+    comments: [
+      {
+        comment: "Try using the campground search!",
+        username: "campNash007"
+      },
+      {
+        comment: "I really liked Virgin Falls. Its only like a 2 hour drive. Look it up!",
+        username: "SaraKB"
+      }
+    ]
+  },
+  {
+    username: "SaraKB",
+    body: "Does anyone want to go day hiking at Percy Warner?",
+    comments: [
+      {
+        comment: "Oh! Oh! I'm in!",
+        username: "campNash007"
+      },
+      {
+        comment: "I'm down as long as there's beer!",
+        username: "tardy"
+      }
+    ]
+  }
+]
+
+db.Post
+  .remove({})
+  .then(() => db.Post.collection.insertMany(postSeed))
+  .then(data => {
+    console.log(data.result.n + " POSTS inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
+
