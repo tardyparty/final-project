@@ -13,11 +13,21 @@ class PostCard extends Component {
         }
     }
 
+    componentWillMount() {
+        this.loadComments();
+    }
+    
+    loadComments = () => {
+        API.getComments()
+            .then( res => this.setState({ posts: res.data }))
+            .catch( err => console.log(err))
+    }
+
     render() {
         return(
             <Card>
                 <Card.Title>
-                    { props.Post.username}
+                    { props.username}
                 </Card.Title>
                 <Card.Body>
                     <h1>{ props.Post.message }</h1>

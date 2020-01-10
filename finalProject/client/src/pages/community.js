@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import API from "../utils/API";
 import Header from "../components/Nav";
 import Footer from "../components/footer";
 import Post from "../components/postForm";
@@ -14,6 +15,16 @@ class Community extends Component {
         }
     }
 
+    componentWillMount() {
+        this.loadPosts();
+    }
+    
+    loadPosts = () => {
+        API.getPosts()
+            .then( res => this.setState({ posts: res.data }))
+            .catch( err => console.log(err))
+    }
+
     render() {
         return (
             <div>
@@ -22,7 +33,7 @@ class Community extends Component {
                     <Post />
                     {this.state.posts.map( post => {
                         return (
-                            <Post
+                            <PostCard
                                 ID={post.ID}
                                 author={post.author}
                                 message={post.message}
