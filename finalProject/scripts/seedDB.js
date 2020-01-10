@@ -195,7 +195,7 @@ const postSeed = [
 
 db.Post
   .remove({})
-  .then(() => db.Post.collection.insertMany(inventorySeed))
+  .then(() => db.Post.collection.insertMany(postSeed))
   .then(data => {
     console.log(data.result.n + " POSTS inserted!");
     process.exit(0);
