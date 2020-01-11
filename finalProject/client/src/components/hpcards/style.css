@@ -4,10 +4,19 @@
     
 }
 
+h1 h5 {
+    font-family: "Cambria";
+}
+
+p {
+    font-family: "Open Sans";
+}
+
 .btn {
     text-align: center;
     background-color: #406E84 !important;
     color: #E9C4A9 !important;
+    width: 160px;
     top: 20px;
     bottom: 0px;
     right: 20px;
@@ -16,4 +25,8 @@
 
 .card-img-top {
     height: 200px;
+}
+
+@media screen and (max-width: 768px) {
+
 }
