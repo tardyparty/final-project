@@ -2,9 +2,24 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const commentSchema = new Schema({
-  username: String,
-  message: String
+  body: String,
+  author: {
+    type: Schema.Types.ObjectId, ref: "User"
+  },
+  post: {
+    type: Schema.Types.ObjectId, ref: "Post"
+  },
+  timestamps: true 
 });
+
+commentSchema.methods.toJSONFor = function( user ) {
+  return {
+    id: this._id,
+    body: this.body,
+    createdAt: this.createdAt,
+    author: this.author.toJSONFor(user)
+  }
+}
 
 const Comment = mongoose.model("Comment", commentSchema);
 
