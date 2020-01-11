@@ -10,7 +10,7 @@ router.use("/comment", commentRoutes);
 router.use("/posts", postRoutes);
 router.use("/user", userRoutes);
 
-router.user( function(err, req, res, next) {
+router.use( function(err, req, res, next) {
     if (err.name === "ValidationError" ) {
         return res.status(422).json({
             errors: Object.keys(err.errors).reduce( function(errors, key) {
