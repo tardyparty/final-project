@@ -164,31 +164,15 @@ db.Inventory
 
 const postSeed = [
   {
-    username: "tardy",
+    author: "tardy",
     body: "Where should I go camping close to Nashville?",
     comments: [
-      {
-        comment: "Try using the campground search!",
-        username: "campNash007"
-      },
-      {
-        comment: "I really liked Virgin Falls. Its only like a 2 hour drive. Look it up!",
-        username: "SaraKB"
-      }
     ]
   },
   {
-    username: "SaraKB",
+    author: "SaraKB",
     body: "Does anyone want to go day hiking at Percy Warner?",
     comments: [
-      {
-        comment: "Oh! Oh! I'm in!",
-        username: "campNash007"
-      },
-      {
-        comment: "I'm down as long as there's beer!",
-        username: "tardy"
-      }
     ]
   }
 ]

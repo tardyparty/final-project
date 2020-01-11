@@ -4,28 +4,29 @@ import Header from "../components/Nav";
 import Footer from "../components/footer";
 import PostForm from "../components/postForm";
 import PostCard from "../components/postCard";
+import PostList from "../components/postList";
 import { Container, Form, Button } from "react-bootstrap";
+import agent from "../utils/agent";
+import { connect } from "react-redux";
+
+const Promise = global.Promise;
+
+const mapStateToProps = state => ({
+    posts: state.posts
+});
+
+const mapDispatchToProps = dispatch => ({
+    onLoad: (payload) =>
+        dispatch({ type: "COMMUNITY_LOADED", payload })
+});
 
 class Community extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            posts: []
-        }
-    }
-
-    componentWillMount() {
-        this.loadPosts();
-    }
     
-    loadPosts = () => {
-        API.getPosts()
-            .then( (res) => this.setState({ posts: res.data }))
-            .catch( (err) => console.log(err));
+    componentWillMount() {
+        this.props.onLoad( agent.Posts.all())
         
-        console.log("load posts", this.state.posts);
-    }
+        console.log(this.state);
+    };
 
     render() {
         return (
@@ -34,16 +35,7 @@ class Community extends Component {
                 <Container>
                     <h1 className="text-center"> Community </h1>
                     <PostForm />
-                    {this.state.posts.map( post => {
-                        return (
-                            <PostCard
-                                id={ post._ID }
-                                username={ post.username }
-                                body={ post.body }
-                                comments={ post.comments }
-                            />
-                        )
-                    })}
+                    <PostList posts={this.props.posts} />
                     <Footer />
                 </Container>
             </div>
@@ -51,5 +43,4 @@ class Community extends Component {
     }
 }
 
-export default Community;
-
+export default connect(mapStateToProps, mapDispatchToProps)(Community);

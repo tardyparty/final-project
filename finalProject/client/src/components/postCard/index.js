@@ -1,40 +1,37 @@
-import React, { Component } from "react";
+import React from "react";
 import { Card, Container } from "react-bootstrap";
 
-class PostCard extends Component {
-    constructor(props) {
-        super(props);
+const PostCard = props => {
 
-        this.state = {
-            id: props.id,
-            username: props.username,
-            body: props.body,
-            comments: [ props.comments ]
-        }
-    }
+    const post = props.post;
 
-    render() {
-        return(
-            <Card>
-                <Card.Title>
-                    { this.state.username }
-                </Card.Title>
-                <Card.Body>
-                    <h1>{ this.state.body }</h1>
-                    <Container>
-                        { this.state.comments.map( comment => {
-                            return (
-                                <div>
-                                    <h2> { comment.username } </h2>
-                                    <p> { comment.comment } </p>
-                                </div>
-                            )}
+    return (
+        <Card>
+            <Card.Title>
+                { post.author.username }
+                <span className="date">
+                    {new Date(post.createdAt).toDateString()}
+                </span>
+            </Card.Title>
+            <Card.Body>
+                <h1>{ post.body }</h1>
+                <Container>
+                    { post.comments.map( comment => {
+                        return (
+                            <div>
+                                <h2> { comment.author.username } </h2>
+                                <p> { comment.body } </p>
+                                <span className="date">
+                                    {new Date(comment.createdAt).toDateString()}
+                                </span>
+                            </div>
                         )}
-                    </Container>
-                </Card.Body>
-            </Card>
-        )
-    }   
-}
+                    )}
+                </Container>
+            </Card.Body>
+        </Card>
+    )
+}   
+
 
 export default PostCard;

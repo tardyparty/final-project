@@ -1,13 +1,13 @@
 const router = require("express").Router();
 const inventoryRoutes = require("./inventory");
-const commentRoutes = require("./comment");
+// const commentRoutes = require("./comment");
 const postRoutes = require("./post");
 const userRoutes = require("./user");
 const profileRoutes = require("./profile");
 
 
 router.use("/inventory", inventoryRoutes);
-router.use("/comment", commentRoutes);
+// router.use("/comment", commentRoutes);
 router.use("/posts", postRoutes);
 router.use("/user", userRoutes);
 router.use("/profiles", profileRoutes)

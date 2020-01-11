@@ -12,10 +12,11 @@ import Login from "../pages/login";
 import Register from "../pages/register";
 
 // auth
-require("../../../models/user");
-require("../../../models/posts");
-require("../../../models/comment");
-require("../../../config/passport");
+// import { connect } from "react-redux";
+// require("../../../models/user");
+// require("../../../models/posts");
+// require("../../../models/comment");
+// require("../config/passport");
 
 
 function App() {
