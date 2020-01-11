@@ -1,0 +1,20 @@
+.nav {
+    background-color: #689504;
+    border-top: 5px #FFD75A;
+}
+
+.footer {
+    border-top: 5px solid #FFD75A;
+    text-align: center;
+}
+#footer-collapse {
+    background-color: #689504;
+    text-align: center;
+    
+}
+
+a.footer-text {
+    text-align: center;
+    margin: auto;
+    color: #FFD75A;
+}
