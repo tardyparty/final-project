@@ -8,7 +8,7 @@ class SPCards extends React.Component {
                 <div class="row">
                     <div class="col-md-12">
                         <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-3 text-center">
                                 <div class="card border-light">
                                     <h5 class="card-title">
                                         Basic Car Camper
@@ -18,7 +18,7 @@ class SPCards extends React.Component {
 
 
                                         <p class="card-text">
-                                            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                                            For the Overnight Car Camper. This package includes the following:
 							                        </p>
                                         <p>
                                             <a class="btn btn-primary" href="#">Rent Yours Today!</a>
@@ -26,7 +26,7 @@ class SPCards extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3 text-center">
                                 <div class="card border-light">
                                     <h5 class="card-title">
                                         Glam/Party Camper
@@ -36,7 +36,7 @@ class SPCards extends React.Component {
 
 
                                         <p class="card-text">
-                                            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                                            For the Camper who enjoys comfort even more than they love the outdoors. This package included the follwoing:
 							                        </p>
                                         <p>
                                             <a class="btn btn-primary" href="#">Rent Yours Today!</a>
@@ -44,7 +44,7 @@ class SPCards extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3 text-center">
                                 <div class="card border-light">
                                     <h5 class="card-title">
                                         Couple Campers
@@ -53,7 +53,7 @@ class SPCards extends React.Component {
                                     <div class="card-block">
 
                                         <p class="card-text">
-                                            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                                            For the Camper couple or friends who just want to get away together. This package includes the following:
 							                        </p>
                                         <p>
                                             <a class="btn btn-primary" href="#">Rent Yours Today!</a>
@@ -61,7 +61,7 @@ class SPCards extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3 text-center">
                                 <div class="card border-light">
                                     <h5 class="card-title">
                                         Solo Camper
@@ -70,7 +70,7 @@ class SPCards extends React.Component {
                                     <div class="card-block">
 
                                         <p class="card-text">
-                                            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                                            For the Camper who is at one with nature. This package includes the following:
 							                        </p>
                                         <p>
                                             <a class="btn btn-primary" href="#">Rent Yours Today!</a>
