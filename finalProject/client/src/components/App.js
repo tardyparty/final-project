@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+// pages
 import Home from "../pages/home";
 import Store from "../pages/store";
 import Search from "../pages/search";
@@ -8,6 +10,13 @@ import Contact from "../pages/contact";
 import Community from "../pages/community";
 import Login from "../pages/login";
 import Register from "../pages/register";
+
+// auth
+require("../../../models/user");
+require("../../../models/posts");
+require("../../../models/comment");
+require("../../../config/passport");
+
 
 function App() {
   return (
