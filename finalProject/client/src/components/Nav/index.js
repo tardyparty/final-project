@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
+import Login from "../loginBtn";
 import "./style.css";
 
 function Header() {
@@ -19,7 +20,9 @@ function Header() {
           <Nav.Link className="text-nav md-auto" href="/blog">Blog</Nav.Link>
           <Nav.Link className="text-nav md-auto" href="/contact">Contact Us</Nav.Link>
           <Nav.Link className="text-nav md-auto" href="/community">Community</Nav.Link>
-          <Nav.Link className="text-nav md-auto" href="/login">Login</Nav.Link>
+          <Nav.Link className="text-nav md-auto">
+            <Login />
+          </Nav.Link>
         </Nav>
         <Nav>
           
