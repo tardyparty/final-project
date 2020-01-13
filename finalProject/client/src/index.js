@@ -9,9 +9,10 @@ const defaultState = {
   appName: 'community',
   posts: null
 };
+
 const reducer = function(state = defaultState, action) {
   switch (action.type) {
-    case `COMMUNITY_LOADED`:
+    case 'COMMUNITY_LOADED':
       return { ...state, posts: action.payload.posts };
   }
   return state;

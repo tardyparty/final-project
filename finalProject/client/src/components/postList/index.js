@@ -3,6 +3,8 @@ import React from 'react';
 
 const PostList = props => {
   if (!props.posts) {
+
+    console.log(props);
     return (
       <div>Loading...</div>
     );

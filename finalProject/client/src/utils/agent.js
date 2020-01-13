@@ -16,7 +16,7 @@ const requests = {
 
 const Posts = {
     all: page => 
-        requests.get(`/posts?limit=10`)
+        requests.get(`/posts`)
 };
 
 export default {

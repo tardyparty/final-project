@@ -1,4 +1,4 @@
-var http = require('http'),
+const http = require('http'),
     path = require('path'),
     methods = require('methods'),
     express = require('express'),
@@ -9,7 +9,7 @@ var http = require('http'),
     errorhandler = require('errorhandler'),
     mongoose = require('mongoose');
 
-var isProduction = process.env.NODE_ENV === 'production';
+var isProduction = process.env.NODE_ENV === 'development';
 
 // Create global app object
 var app = express();

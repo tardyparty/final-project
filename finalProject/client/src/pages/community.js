@@ -18,7 +18,7 @@ const mapDispatchToProps = dispatch => ({
 
 class Community extends Component {
     
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         this.props.onLoad( agent.Posts.all())
         
         console.log(this.state);
