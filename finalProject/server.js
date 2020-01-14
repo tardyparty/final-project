@@ -1,25 +1,84 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const routes = require("./routes");
-const app = express();
-const PORT = process.env.PORT || 8090;
+const http = require('http'),
+    path = require('path'),
+    methods = require('methods'),
+    express = require('express'),
+    bodyParser = require('body-parser'),
+    session = require('express-session'),
+    cors = require('cors'),
+    passport = require('passport'),
+    errorhandler = require('errorhandler'),
+    mongoose = require('mongoose');
 
+var isProduction = process.env.NODE_ENV === 'development';
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+// Create global app object
+var app = express();
 
+app.use(cors());
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+// Normal express config defaults
+app.use(require('morgan')('dev'));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+app.use(require('method-override')());
+app.use(express.static(__dirname + '/public'));
+
+app.use(session({ secret: 'campers', cookie: { maxAge: 60000 }, resave: false, saveUninitialized: false  }));
+
+if (!isProduction) {
+  app.use(errorhandler());
 }
 
-app.use(routes);
+if(isProduction){
+  mongoose.connect(process.env.MONGODB_URI);
+} else {
+  mongoose.connect('mongodb://localhost/final-projectDB');
+  mongoose.set('debug', true);
+}
 
+require('./models/user');
+require('./models/posts');
+require('./models/comment');
+require('./config/passport');
 
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/final-projectDB", {useNewUrlParser:true,useUnifiedTopology: true});
+app.use(require('./routes'));
 
+/// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  var err = new Error('Not Found');
+  err.status = 404;
+  next(err);
+});
 
-app.listen(PORT, function() {
-  console.log(`API Server now listening on PORT ${PORT}!`);
+/// error handlers
+
+// development error handler
+// will print stacktrace
+if (!isProduction) {
+  app.use(function(err, req, res, next) {
+    console.log(err.stack);
+
+    res.status(err.status || 500);
+
+    res.json({'errors': {
+      message: err.message,
+      error: err
+    }});
+  });
+}
+
+// production error handler
+// no stacktraces leaked to user
+app.use(function(err, req, res, next) {
+  res.status(err.status || 500);
+  res.json({'errors': {
+    message: err.message,
+    error: {}
+  }});
+});
+
+// finally, let's start our server...
+var server = app.listen( process.env.PORT || 8099, function(){
+  console.log('Listening on port ' + server.address().port);
 });

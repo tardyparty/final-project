@@ -10,13 +10,7 @@ import Contact from "../pages/contact";
 import Community from "../pages/community";
 import Login from "../pages/login";
 import Register from "../pages/register";
-
-// auth
-require("../../../models/user");
-require("../../../models/posts");
-require("../../../models/comment");
-require("../../../config/passport");
-
+import { connect } from 'react-redux';
 
 function App() {
   return (
@@ -30,7 +24,7 @@ function App() {
           <Route exact path="/blog" component={Blog} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/community" component={Community} />
-          <Route exact path="/user/login" component={Login} />
+          <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
         </Switch>
       </div>

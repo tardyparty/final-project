@@ -1,16 +1,9 @@
 const router = require("express").Router();
-const inventoryRoutes = require("./inventory");
-const commentRoutes = require("./comment");
-const postRoutes = require("./post");
-const userRoutes = require("./user");
-const profileRoutes = require("./profile");
 
-
-router.use("/inventory", inventoryRoutes);
-router.use("/comment", commentRoutes);
-router.use("/posts", postRoutes);
-router.use("/user", userRoutes);
-router.use("/profiles", profileRoutes)
+router.use("/inventory", require("./inventory"));
+router.use("/posts", require("./post"));
+router.use("/user", require("./user"));
+router.use("/profiles", require("./profile"))
 
 router.use( function(err, req, res, next) {
     if (err.name === "ValidationError" ) {

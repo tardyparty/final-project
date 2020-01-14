@@ -157,38 +157,30 @@ db.Inventory
     console.log(data.result.n + " INVENTORY inserted!");
     process.exit(0);
   })
-  .catch(err => {
+  .catch(err => {_
     console.error(err);
     process.exit(1);
   });
 
 const postSeed = [
   {
-    username: "tardy",
+    author: {
+      _id: '5e1d07555c13f02bc1313a29',
+      username: "tardyparty",
+      name: "David Tardy"
+    },
     body: "Where should I go camping close to Nashville?",
     comments: [
-      {
-        comment: "Try using the campground search!",
-        username: "campNash007"
-      },
-      {
-        comment: "I really liked Virgin Falls. Its only like a 2 hour drive. Look it up!",
-        username: "SaraKB"
-      }
     ]
   },
   {
-    username: "SaraKB",
+    author: {
+      _id: '5e1d07555c13f02bc1313a29',
+      username: "tardyparty",
+      name: "David Tardy"
+    },
     body: "Does anyone want to go day hiking at Percy Warner?",
     comments: [
-      {
-        comment: "Oh! Oh! I'm in!",
-        username: "campNash007"
-      },
-      {
-        comment: "I'm down as long as there's beer!",
-        username: "tardy"
-      }
     ]
   }
 ]
@@ -205,3 +197,23 @@ db.Post
     process.exit(1);
   });
 
+// const userSeed = [
+//   {
+//     username: "tardyparty",
+//     email: "latetard@gmail.com",
+//     name: "David Tardy",
+//     password: "4510tardy"
+//   }
+// ]
+
+// db.User
+//   .remove({})
+//   .then(() => db.User.collection.insertMany(userSeed))
+//   .then(data => {
+//     console.log(data.result.n + " Users inserted!");
+//     process.exit(0);
+//   })
+//   .catch(err => {
+//     console.error(err);
+//     process.exit(1);
+//   });

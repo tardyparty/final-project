@@ -9,8 +9,7 @@ const commentSchema = new Schema({
   post: {
     type: Schema.Types.ObjectId, ref: "Post"
   },
-  timestamps: true 
-});
+}, { timestamps: true });
 
 commentSchema.methods.toJSONFor = function( user ) {
   return {
