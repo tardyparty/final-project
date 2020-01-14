@@ -19,35 +19,9 @@ class SPCards extends React.Component {
 
                                         <p className="card-text">
                                             For the Overnight Car Camper. This package includes the following:
-							            </p>
-                                        <ul>
-                                            <li class="list-item">
-                                                1 - 2 Person Lightweight Backpacking Tent
-				                            </li>
-                                            <li class="list-item">
-                                                Consectetur adipiscing elit
-				                            </li>
-                                            <li class="list-item">
-                                                Integer molestie lorem at massa
-				                            </li>
-                                            <li class="list-item">
-                                                Facilisis in pretium nisl aliquet
-				                            </li>
-                                            <li class="list-item">
-                                                Nulla volutpat aliquam velit
-				                            </li>
-                                            <li class="list-item">
-                                                Faucibus porta lacus fringilla vel
-				                            </li>
-                                            <li class="list-item">
-                                                Aenean sit amet erat nunc
-				                            </li>
-                                            <li class="list-item">
-                                                Eget porttitor lorem
-				                            </li>
-                                        </ul>
+							                        </p>
                                         <p>
-                                            <a className="btn btn-primary" href="/store_car">Rent Yours Today!</a>
+                                            <a className="btn btn-primary" href="#">Rent Yours Today!</a>
                                         </p>
                                     </div>
                                 </div>
@@ -63,35 +37,9 @@ class SPCards extends React.Component {
 
                                         <p className="card-text">
                                             For the Camper who enjoys comfort even more than they love the outdoors. This package included the follwoing:
-							            </p>
-                                        <ul>
-                                            <li class="list-item">
-                                                Lorem ipsum dolor sit amet
-				                            </li>
-                                            <li class="list-item">
-                                                Consectetur adipiscing elit
-				                            </li>
-                                            <li class="list-item">
-                                                Integer molestie lorem at massa
-				                            </li>
-                                            <li class="list-item">
-                                                Facilisis in pretium nisl aliquet
-				                            </li>
-                                            <li class="list-item">
-                                                Nulla volutpat aliquam velit
-				                            </li>
-                                            <li class="list-item">
-                                                Faucibus porta lacus fringilla vel
-				                            </li>
-                                            <li class="list-item">
-                                                Aenean sit amet erat nunc
-				                            </li>
-                                            <li class="list-item">
-                                                Eget porttitor lorem
-				                            </li>
-                                        </ul>
+							                        </p>
                                         <p>
-                                            <a className="btn btn-primary" href="/store_glam">Rent Yours Today!</a>
+                                            <a className="btn btn-primary" href="#">Rent Yours Today!</a>
                                         </p>
                                     </div>
                                 </div>
@@ -106,35 +54,9 @@ class SPCards extends React.Component {
 
                                         <p className="card-text">
                                             For the Camper couple or friends who just want to get away together. This package includes the following:
-							            </p>
-                                        <ul>
-                                            <li class="list-item">
-                                                Lorem ipsum dolor sit amet
-				                            </li>
-                                            <li class="list-item">
-                                                Consectetur adipiscing elit
-				                            </li>
-                                            <li class="list-item">
-                                                Integer molestie lorem at massa
-				                            </li>
-                                            <li class="list-item">
-                                                Facilisis in pretium nisl aliquet
-				                            </li>
-                                            <li class="list-item">
-                                                Nulla volutpat aliquam velit
-				                            </li>
-                                            <li class="list-item">
-                                                Faucibus porta lacus fringilla vel
-				                            </li>
-                                            <li class="list-item">
-                                                Aenean sit amet erat nunc
-				                            </li>
-                                            <li class="list-item">
-                                                Eget porttitor lorem
-				                            </li>
-                                        </ul>
+							                        </p>
                                         <p>
-                                            <a className="btn btn-primary" href="/store_couple">Rent Yours Today!</a>
+                                            <a className="btn btn-primary" href="#">Rent Yours Today!</a>
                                         </p>
                                     </div>
                                 </div>
@@ -149,35 +71,9 @@ class SPCards extends React.Component {
 
                                         <p className="card-text">
                                             For the Camper who is at one with nature. This package includes the following:
-							            </p>
-                                        <ul>
-                                            <li class="list-item">
-                                                Lorem ipsum dolor sit amet
-				                            </li>
-                                            <li class="list-item">
-                                                Consectetur adipiscing elit
-				                            </li>
-                                            <li class="list-item">
-                                                Integer molestie lorem at massa
-				                            </li>
-                                            <li class="list-item">
-                                                Facilisis in pretium nisl aliquet
-				                            </li>
-                                            <li class="list-item">
-                                                Nulla volutpat aliquam velit
-				                            </li>
-                                            <li class="list-item">
-                                                Faucibus porta lacus fringilla vel
-				                            </li>
-                                            <li class="list-item">
-                                                Aenean sit amet erat nunc
-				                            </li>
-                                            <li class="list-item">
-                                                Eget porttitor lorem
-				                            </li>
-                                        </ul>
+							                        </p>
                                         <p>
-                                            <a className="btn btn-primary" href="/store_solo">Rent Yours Today!</a>
+                                            <a className="btn btn-primary" href="#">Rent Yours Today!</a>
                                         </p>
                                     </div>
                                 </div>
@@ -185,7 +81,6 @@ class SPCards extends React.Component {
                         </div>
                     </div>
                 </div>
-
             </div>
         );
     }

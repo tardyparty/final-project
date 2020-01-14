@@ -1,20 +1,14 @@
 .d-block {
     padding-top: 71px;
     height: 400px;
-   
-}
-
-div.container {
-    max-width: 100%;
-    margin: auto;
-    padding-left: 0;
-    padding-right: 0;
+    
 }
 
 .btn-carousel {
     text-align: center;
     background-color: #406E84 !important;
     color: #E9C4A9 !important;
+    
 }
 
 .btn:hover {

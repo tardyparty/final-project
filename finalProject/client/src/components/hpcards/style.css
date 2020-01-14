@@ -28,10 +28,5 @@ p {
 }
 
 @media screen and (max-width: 768px) {
-h5.card-title {
-    font-size: 16px;
-}
-p.card-text {
-    font-size: small;
-}
+
 }
