@@ -31,7 +31,9 @@ class Community extends Component {
                 <Container>
                     <h1 className="text-center"> Community </h1>
                     <PostForm />
-                    <PostList posts={this.props.posts} />
+                    <Container className="text-center">
+                        <PostList posts={this.props.posts} />
+                    </Container>
                     <Footer />
                 </Container>
             </div>

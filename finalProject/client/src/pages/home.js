@@ -6,7 +6,7 @@ import Footer from "../components/footer";
 import HPCards from "../components/hpcards";
 
 
-class Home extends React.Component {
+class Home extends Component {
 
     render() {
         return (

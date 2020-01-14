@@ -14,6 +14,7 @@ import Community from "../pages/community";
 import Login from "../pages/login";
 import Register from "../pages/register";
 
+
 const mapStateToProps = state => ({
   redirectTo: state.common.redirectTo,
   currentUser: state.common.currentUser
@@ -27,7 +28,7 @@ const mapDispatchToProps = dispatch => ({
 })
 
 class App extends Component {
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     const token = window.localStorage.getItem('jwt');
     if (token) {
       agent.setToken(token);
@@ -63,6 +64,7 @@ class App extends Component {
     );
   }
 }
+
 
 App.contextTypes = {
   router: PropTypes.object.isRequired

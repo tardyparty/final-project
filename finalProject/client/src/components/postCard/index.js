@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 import { Card, Container } from "react-bootstrap";
 
 const PostCard = props => {
