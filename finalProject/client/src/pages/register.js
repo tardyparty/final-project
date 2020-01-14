@@ -3,6 +3,8 @@ import ListErrors from '../components/listErrors';
 import React from 'react';
 import agent from '../utils/agent';
 import { connect } from 'react-redux';
+import Nav from '../components/Nav';
+import Footer from '../components/footer';
 
 const mapStateToProps = state => ({ ...state.auth });
 
@@ -36,6 +38,7 @@ class Register extends React.Component {
 
     return (
       <div className="auth-page">
+        <Nav />
         <div className="container page">
           <div className="row">
 
@@ -43,7 +46,7 @@ class Register extends React.Component {
               <h1 className="text-xs-center">Sign Up</h1>
               <p className="text-xs-center">
                 <a href="/login">
-                  Have an account?
+                  Have an account? Login Here
                 </a>
               </p>
 
@@ -92,6 +95,7 @@ class Register extends React.Component {
 
           </div>
         </div>
+        <Footer />
       </div>
     );
   }
