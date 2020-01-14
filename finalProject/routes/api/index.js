@@ -2,7 +2,7 @@ const router = require("express").Router();
 
 router.use("/inventory", require("./inventory"));
 router.use("/posts", require("./post"));
-router.use("/user", require("./user"));
+router.use("/users", require("./user"));
 router.use("/profiles", require("./profile"))
 
 router.use( function(err, req, res, next) {

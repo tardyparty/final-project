@@ -18,7 +18,7 @@ router.post("/", function(req, res, next) {
         .catch(next);
 });
 
-router.post("/users/login", function(req, res, next) {
+router.post("/login", function(req, res, next) {
     if ( !req.body.user.email ) {
         return res.status(422).json({ errors: { email: "can't be blank"}});
     }

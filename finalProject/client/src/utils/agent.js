@@ -33,5 +33,6 @@ const Auth = {
 
 export default {
     Posts,
-    Auth
+    Auth,
+    // setToken: _token => { token = _token; }
 };

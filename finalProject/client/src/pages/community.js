@@ -8,7 +8,7 @@ import agent from "../utils/agent";
 import { connect } from "react-redux";
 
 const mapStateToProps = state => ({
-    posts: state.posts
+    posts: state.community.posts
 });
 
 const mapDispatchToProps = dispatch => ({

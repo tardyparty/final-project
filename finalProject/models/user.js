@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const uniqueValidator = require("mongoose-unique-validator");
 const crypto = require("crypto");
 const jwt = require("jsonwebtoken");
-const secret = process.env.JWTSECRET;
+const secret = require('../config/index').secret;
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
@@ -25,7 +25,7 @@ const userSchema = new Schema({
     name: String,
     hash: String,
     salt: String
-});
+}, {timestamps: true});
 
 // usernames and emails must be unique
 userSchema.plugin(uniqueValidator, { message: "is already taken."});
@@ -53,7 +53,8 @@ userSchema.methods.generateJWT = function() {
         id: this._id,
         username: this.username,
         exp: parseInt(exp.getTime() / 1000),
-    }, secret);
+    }, 
+    secret);
 }
 
 // pass user json to frontend only if auth
