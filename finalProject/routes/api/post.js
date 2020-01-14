@@ -29,60 +29,76 @@ router.param('comment', function(req, res, next, id) {
 });
 
 router.get('/', auth.optional, function(req, res, next) {
-  var query = {};
-  var limit = 20;
-  var offset = 0;
-
-  if(typeof req.query.limit !== 'undefined'){
-    limit = req.query.limit;
-  }
-
-  if(typeof req.query.offset !== 'undefined'){
-    offset = req.query.offset;
-  }
-
-  // if( typeof req.query.tag !== 'undefined' ){
-  //   query.tagList = {"$in" : [req.query.tag]};
-  // }
-
-  Promise.all([
-    req.query.author ? User.findOne({username: req.query.author}) : null
-  ]).then(function(results){
-    var author = results[0];
-
-    if(author){
-      query.author = author._id;
-    }
-
-    // if(favoriter){
-    //   query._id = {$in: favoriter.favorites};
-    // } else if(req.query.favorited){
-    //   query._id = {$in: []};
-    // }
-
-    return Promise.all([
-      Post.find(query)
-        .limit(Number(limit))
-        .skip(Number(offset))
-        .sort({createdAt: 'desc'})
-        .populate('author')
-        .exec(),
-      Post.count(query).exec(),
-      req.payload ? User.findById(req.payload.id) : null,
-    ]).then(function(results){
-      var posts = results[0];
-      var postsCount = results[1];
-      var user = results[2];
+  Post.find({})
+    .then(function(results){
+      console.log("Results: ", results);
+      var posts = results;
+      // var postsCount = results[1];
+      // var user = results[2];
 
       return res.json({
-        posts: posts.map(function(post){
-          return post.toJSONFor(user);
-        }),
-        postsCount: postsCount
+        posts
       });
-    });
-  }).catch(next);
+    })
+  .catch(next);
 });
+
+
+  // var query = {};
+  // var limit = 20;
+  // var offset = 0;
+
+  // if(typeof req.query.limit !== 'undefined'){
+  //   limit = req.query.limit;
+  // }
+
+  // if(typeof req.query.offset !== 'undefined'){
+  //   offset = req.query.offset;
+  // }
+
+  // // if( typeof req.query.tag !== 'undefined' ){
+  // //   query.tagList = {"$in" : [req.query.tag]};
+  // // }
+
+  // Promise.all([
+  //   req.query.author ? User.findOne({username: req.query.author}) : null
+  // ]).then(function(results){
+  //   var author = results[0];
+  //   console.log(results, "promise.all BE Get");
+
+  //   if(author){
+  //     query.author = author._id;
+  //   }
+
+  //   // if(favoriter){
+  //   //   query._id = {$in: favoriter.favorites};
+  //   // } else if(req.query.favorited){
+  //   //   query._id = {$in: []};
+  //   // }
+
+  //   return Promise.all([
+  //     Post.find(query)
+  //       .limit(Number(limit))
+  //       .skip(Number(offset))
+  //       .sort({createdAt: 'desc'})
+  //       .populate('author')
+  //       .exec(),
+  //     Post.count(query).exec(),
+  //     req.payload ? User.findById(req.payload.id) : null,
+  //   ]).then(function(results){
+  //     var posts = results[0];
+  //     var postsCount = results[1];
+  //     var user = results[2];
+
+  //     return res.json({
+  //       posts: posts.map(function(post){
+  //         return post.toJSONFor(user);
+  //       }),
+  //       postsCount: postsCount
+  //     });
+  //   });
+  // }).catch(next);
+// });
 
 // router.get('/feed', auth.required, function(req, res, next) {
 //   var limit = 20;

@@ -1,17 +1,15 @@
-import { applyMiddleware, createStore } from 'redux';
+import { applyMiddleware, createStore, combineReducers } from 'redux';
 import { promiseMiddleware } from './middleware';
+import auth from "./reducers/auth";
+import home from "./reducers/home";
+import common from "./reducers/common";
 
-const defaultState = {
-  appName: 'community',
-  posts: null
-};
-const reducer = function(state = defaultState, action) {
-  switch (action.type) {
-    case 'COMMUNITY_LOADED':
-      return { ...state, posts: action.payload.posts };
-  }
-  return state;
-};
+
+const reducer = combineReducers({
+  auth,
+  common,
+  home
+});
 
 const middleware = applyMiddleware(promiseMiddleware);
 

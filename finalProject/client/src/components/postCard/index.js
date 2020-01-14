@@ -8,7 +8,7 @@ const PostCard = props => {
     return (
         <Card>
             <Card.Title>
-                { post.author.username }
+                {/* { post.author.username } */}
                 <span className="date">
                     {new Date(post.createdAt).toDateString()}
                 </span>

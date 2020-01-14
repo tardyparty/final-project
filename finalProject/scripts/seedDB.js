@@ -157,20 +157,28 @@ db.Inventory
     console.log(data.result.n + " INVENTORY inserted!");
     process.exit(0);
   })
-  .catch(err => {
+  .catch(err => {_
     console.error(err);
     process.exit(1);
   });
 
 const postSeed = [
   {
-    author: "tardy",
+    author: {
+      _id: '5e1d07555c13f02bc1313a29',
+      username: "tardyparty",
+      name: "David Tardy"
+    },
     body: "Where should I go camping close to Nashville?",
     comments: [
     ]
   },
   {
-    author: "SaraKB",
+    author: {
+      _id: '5e1d07555c13f02bc1313a29',
+      username: "tardyparty",
+      name: "David Tardy"
+    },
     body: "Does anyone want to go day hiking at Percy Warner?",
     comments: [
     ]
@@ -189,3 +197,23 @@ db.Post
     process.exit(1);
   });
 
+// const userSeed = [
+//   {
+//     username: "tardyparty",
+//     email: "latetard@gmail.com",
+//     name: "David Tardy",
+//     password: "4510tardy"
+//   }
+// ]
+
+// db.User
+//   .remove({})
+//   .then(() => db.User.collection.insertMany(userSeed))
+//   .then(data => {
+//     console.log(data.result.n + " Users inserted!");
+//     process.exit(0);
+//   })
+//   .catch(err => {
+//     console.error(err);
+//     process.exit(1);
+//   });

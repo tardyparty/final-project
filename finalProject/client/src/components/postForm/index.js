@@ -6,9 +6,7 @@ class PostForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: "tardy",
-            body: "",
-            comments: []
+           
         }
     }
     

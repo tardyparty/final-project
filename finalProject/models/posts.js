@@ -13,9 +13,9 @@ const postSchema = new Schema({
 
 postSchema.methods.toJSONFor = function( user ) {
   return {
-    author: this.toJSONFor(user),
     body: this.body,
-    comments: this.comments
+    comments: this.comments,
+    author: this.author.toProfileJSONFor(user),
   }
 }
 
