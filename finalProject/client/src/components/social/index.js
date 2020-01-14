@@ -15,7 +15,6 @@ class Social extends React.Component {
                                 <h4>Best Daddy Ever</h4>
                             </div>
                             <div className="col-md-1">
-
                             </div>
                             <div className="col-md-7">
                                 <p id="community-text">
@@ -26,7 +25,6 @@ class Social extends React.Component {
                                 <button type="button" className="btn btn-success">
                                     Share Your Experience
 					            </button>
-
                             </div>
                         </div>
                     </div>
@@ -39,7 +37,6 @@ class Social extends React.Component {
                                 <h4>Reconnected Camper</h4>
                             </div>
                             <div className="col-md-1">
-
                             </div>
                             <div className="col-md-7">
                                 <p id="community-text">
@@ -47,7 +44,6 @@ class Social extends React.Component {
                                 </p>
                             </div>
                             <div className="col-md-2">
-
                             </div>
                         </div>
                     </div>
@@ -57,10 +53,9 @@ class Social extends React.Component {
                         <div className="row">
                             <div className="col-md-2">
                                 <img alt="Bootstrap Image Preview" src="/images/community_toilet_paper.jpeg" />
-                                <h4>Toilet Paper Bandit</h4>
+                                <h4>TP Bandit</h4>
                             </div>
                             <div className="col-md-1">
-
                             </div>
                             <div className="col-md-7">
                                 <p id="community-text">
@@ -68,7 +63,6 @@ class Social extends React.Component {
                                 </p>
                             </div>
                             <div className="col-md-2">
-
                             </div>
                         </div>
                     </div>
@@ -81,7 +75,6 @@ class Social extends React.Component {
                                 <h4>Wine Girls</h4>
                             </div>
                             <div className="col-md-1">
-
                             </div>
                             <div className="col-md-7">
                                 <p id="community-text">
@@ -89,12 +82,17 @@ class Social extends React.Component {
                                 </p>
                             </div>
                             <div className="col-md-2">
-                                <button type="button" className="btn btn-success">
-                                    Share Your Experience
-					            </button>
-
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10">
+                    </div>
+                    <div class="col-md-2">
+                        <button type="button" className="btn btn-success">
+                            Share Your Experience
+					    </button>
                     </div>
                 </div>
             </div>

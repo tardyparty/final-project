@@ -1,28 +1,28 @@
 import React, { Component } from "react";
 import Header from "../components/Nav";
 import Footer from "../components/footer";
-import ContactUs from "../components/contactus";
+import Spsolo from "../components/spsolo"
 import { Container, Form, Button } from "react-bootstrap";
 
-
-
-class Contact extends React.Component {
+class Store_Solo extends React.Component {
 
     render() {
         return (
             <Container>
                 <Header />
                 <Container>
-                    <ContactUs>
-
-                    </ContactUs>
+                    <Container>
+                        <Spsolo>
+                            
+                        </Spsolo>
+                        
+                    </Container>
+                    <Footer>
+                    </Footer>
                 </Container>
-                <Footer>
-
-                </Footer>
             </Container>
         )
     }
 }
 
-export default Contact;
+export default Store_Solo;
