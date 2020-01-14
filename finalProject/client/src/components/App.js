@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+// pages
 import Home from "../pages/home";
 import Store from "../pages/store";
 import Search from "../pages/search";
@@ -12,6 +14,7 @@ import Store_Car from "../pages/store_car";
 import Store_Couple from "../pages/store_couple";
 import Store_Glam from "../pages/store_glam";
 import Store_Solo from "../pages/store_solo";
+import { connect } from 'react-redux';
 
 function App() {
   return (

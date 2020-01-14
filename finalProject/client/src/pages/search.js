@@ -1,16 +1,62 @@
 import React, { Component } from "react";
 import Header from "../components/Nav";
 import Footer from "../components/footer";
+import searchArea from "../components/searchArea";
 import { Container, Form, Button } from "react-bootstrap";
+import API from "../utils/API";
 
 
 class Search extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+        campsites: [],
+        searchField: ''
+    }
+}
 
+handleFormSubmit = event => {
+  event.preventDefault();
+  // once it clicks it connects to the national park api with the search value
+  API.getCampsite(this.state.searchField)
+      .then(res => {
+          if (res.data === "error") {
+              throw new Error(res.data);
+          }
+          else {
+              // store response in an array
+              let results = res.data
+              //map through the array 
+              results = results.map(result => {
+                  //store campsite info in a new object 
+                  result = {
+                      name: result.name,
+                      description: result.description,
+                      amenities: result.amenities,
+                      accessibility: result.accessibility,
+                      directions: result.directionsoverview
+                  }
+                  return result;
+              })
+              // reset the sate of the empty campsite array to the new arrays of objects with properties geting back from the response
+              this.setState({ campsites: results, error: "" })
+          }
+      })
+      .catch(err => this.setState({ error: err.items }));
+}
+
+handleSearch = (e) => {
+  console.log(e.target.value);
+  this.setState({ searchField: e.target.value })
+}
 
   render() {
     return (
       <Container>
         <Header />
+        <div>
+          <searchArea handleFormSubmit={this.handleFormSubmit} handleSearch={this.handleSearch} />
+        </div>
         <Footer>
         </Footer>
       </Container>

@@ -1,25 +1,43 @@
 import React, { Component } from "react";
 import Header from "../components/Nav";
 import Footer from "../components/footer";
-import { Container, Form, Button } from "react-bootstrap";
-import Social from "../components/social";
+import PostForm from "../components/postForm";
+import PostList from "../components/postList";
+import { Container } from "react-bootstrap";
+import agent from "../utils/agent";
+import { connect } from "react-redux";
 
-class Community extends React.Component {
+const mapStateToProps = state => ({
+    posts: state.posts
+});
+
+const mapDispatchToProps = dispatch => ({
+    onLoad: (payload) =>
+        dispatch({ type: "COMMUNITY_LOADED", payload })
+})
+
+class Community extends Component {
+    
+    UNSAFE_componentWillMount() {
+        this.props.onLoad( agent.Posts.all())
+        
+        console.log(this.state);
+    };
 
     render() {
         return (
-            <Container>
+            <div>
                 <Header />
                 <Container>
-                    <Social>
-
-                    </Social>
+                    <h1 className="text-center"> Community </h1>
+                    <PostForm />
+                    <PostList posts={this.props.posts} />
+                    <Footer />
                 </Container>
-                <Footer>
-                </Footer>
-            </Container>
+            </div>
         )
     }
+
 }
 
-export default Community;
+export default connect(mapStateToProps, mapDispatchToProps)(Community);

@@ -1,10 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 import App from './components/App';
-import * as serviceWorker from './serviceWorker';
-import 'bootstrap/dist/css/bootstrap.min.css'; 
+import { Provider } from 'react-redux';
+import ReactDOM from 'react-dom';
+import React from 'react';
+import { applyMiddleware, createStore } from 'redux';
+import { promiseMiddleware } from './middleware';
 
+const defaultState = {
+  appName: 'community',
+  posts: null
+};
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const reducer = function(state = defaultState, action) {
+  switch (action.type) {
+    case 'COMMUNITY_LOADED':
+      return { ...state, posts: action.payload.posts };
+  }
+  return state;
+};
 
-serviceWorker.unregister()
+const middleware = applyMiddleware(promiseMiddleware);
+
+const store = createStore(reducer, middleware);
+
+ReactDOM.render((
+  <Provider store={store}>
+    <App />
+  </Provider>
+), document.getElementById('root'));

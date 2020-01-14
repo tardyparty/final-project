@@ -1,20 +1,48 @@
 import axios from "axios";
 
 export default {
-  // Gets all books
-  getBooks: function() {
-    return axios.get("/api/books/");
+  // API for campsite
+  getCampsite: function(q){
+    return axios.get("https://developer.nps.gov/api/v1/campgrounds?stateCode=" + q + "&api_key=fU3xD3IP652jeWEDBerlyUAWvN0uM8zcpVY932ku")
   },
-  // Gets the book with the given id
-  getBook: function(id) {
-    return axios.get("/api/books/" + id);
+  // Gets all Inventorys
+  getInventory: function() {
+    return axios.get("/api/inventory/");
   },
-  // Deletes the book with the given id
-  deleteBook: function(id) {
-    return axios.delete("/api/books/" + id);
+  // Gets the Inventory with the given id
+  getIventoryItem: function(id) {
+    return axios.get("/api/inventory/" + id);
   },
-  // Saves a book to the database
-  saveBook: function(bookData) {
-    return axios.post("/api/books/", bookData);
+  // Deletes the Inventory with the given id
+  deleteInventory: function(id) {
+    return axios.delete("/api/inventory/" + id);
+  },
+  // Saves a Inventory to the database
+  saveInventory: function(inventoryData) {
+    return axios.post("/api/inventory/", inventoryData);
+  },
+
+  // ************* API for Posts ****************
+  // Gets all Inventorys
+  getPosts: function() {
+    return axios.get("/api/posts/");
+  },
+  // Gets the Posts with the given id
+  getOnePost: function(id) {
+    return axios.get("/api/posts/" + id);
+  },
+  // updates post
+  // update post find post by id, new comments append to post.comments.push(newComment)
+  updateComment: function(id, newComment) {
+    return axios.put("/api/posts/" + id, newComment)
+  },
+
+  // Deletes the Posts with the given id
+  deletePosts: function(id) {
+    return axios.delete("/api/posts/" + id);
+  },
+  // Saves a Posts to the database
+  savePosts: function(postsData) {
+    return axios.post("/api/posts/", postsData);
   }
-};
+}
