@@ -37,9 +37,9 @@ class App extends Component {
     this.props.onLoad(token ? agent.Auth.current() : null, token);
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if ( nextProps.redirectTo ) {
-      this.context.router.replace(nextProps.redirectTo);
+      // this.context.history.replace(nextProps.redirectTo);
       this.props.onRedirect();
     }
   }
@@ -67,7 +67,7 @@ class App extends Component {
 
 
 App.contextTypes = {
-  router: PropTypes.object.isRequired
+  history: PropTypes.object.isRequired
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
