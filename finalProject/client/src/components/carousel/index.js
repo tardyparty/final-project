@@ -17,7 +17,7 @@ class SlideShow extends React.Component {
             <Carousel.Caption>
               <h1>CAMPERS</h1>
               <p>YOUR CAMPING HUB FOR RENTAL GEAR, CAMPSITES AND COMMUNITY</p>
-              <Button className="btn-carousel" variant="primary">Rent Your Package</Button>
+              <Button className="btn-carousel" variant="primary">RENT YOUR PACKAGE</Button>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -30,7 +30,7 @@ class SlideShow extends React.Component {
             <Carousel.Caption>
               <h1>CAMPERS</h1>
               <p>YOUR CAMPING HUB FOR RENTAL GEAR, CAMPSITES AND COMMUNITY</p>
-              <Button className="btn-carousel" variant="primary">Rent Your Package</Button>
+              <Button className="btn-carousel" variant="primary">RENT YOUR PACKAGE</Button>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -43,7 +43,7 @@ class SlideShow extends React.Component {
             <Carousel.Caption>
               <h1>CAMPERS</h1>
               <p>YOUR CAMPING HUB FOR RENTAL GEAR, CAMPSITES AND COMMUNITY</p>
-              <Button className="btn-carousel" variant="primary">Rent Your Package</Button>
+              <Button className="btn-carousel" variant="primary">RENT YOUR PACKAGE</Button>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>

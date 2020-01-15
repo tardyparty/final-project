@@ -8,23 +8,38 @@ h1 h5 {
     font-family: "Cambria";
 }
 
+h5.card-title {
+    font-size: 26px;
+}
+
 p {
     font-family: "Open Sans";
+    font-size: 20px;
+    text-align: center !important;
+}
+
+p.card-text {
+    font-size: 20px;
+    text-align: center !important;
 }
 
 .btn {
-    text-align: center;
+    text-align: center !important;
     background-color: #406E84 !important;
     color: #E9C4A9 !important;
-    width: 160px;
+    height: 60px;
+    width: 180px;
     top: 20px;
     bottom: 0px;
     right: 20px;
      
 } 
 
-.card-img-top {
-    height: 200px;
+.hp_image {
+    height: 400px;
+    width: 500px !important;
+    padding-left: 80px;
+    
 }
 
 @media screen and (max-width: 768px) {
