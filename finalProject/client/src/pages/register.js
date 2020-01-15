@@ -44,15 +44,15 @@ class Register extends React.Component {
 
             <div className="col-md-6 offset-md-3 col-xs-12">
               <h1 className="text-xs-center">Sign Up</h1>
-              <p className="text-xs-center">
+              <h3 className="text-xs-center">
                 <a href="/login">
                   Have an account? Login Here
                 </a>
-              </p>
+              </h3>
 
               <ListErrors errors={this.props.errors} />
 
-              <form onSubmit={this.submitForm(username, email, password)}>
+              <form onSubmit={this.submitForm(username, email, password)} className="text-center">
                 <fieldset>
 
                   <fieldset className="form-group">
