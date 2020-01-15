@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import Header from "../components/Nav";
 import Footer from "../components/footer";
-import searchArea from "../components/searchArea";
+import SearchArea from "../components/searchArea";
 import { Container, Form, Button } from "react-bootstrap";
 import API from "../utils/API";
+import request from "superagent";
 
 
 class Search extends React.Component {
@@ -25,7 +26,7 @@ handleFormSubmit = event => {
           }
           else {
               // store response in an array
-              let results = res.data
+              let results = res.data.data
               //map through the array 
               results = results.map(result => {
                   //store campsite info in a new object 
@@ -36,7 +37,9 @@ handleFormSubmit = event => {
                       accessibility: result.accessibility,
                       directions: result.directionsoverview
                   }
+                  console.log(result);
                   return result;
+                  
               })
               // reset the sate of the empty campsite array to the new arrays of objects with properties geting back from the response
               this.setState({ campsites: results, error: "" })
@@ -55,7 +58,7 @@ handleSearch = (e) => {
       <Container>
         <Header />
         <div>
-          <searchArea handleFormSubmit={this.handleFormSubmit} handleSearch={this.handleSearch} />
+          <SearchArea handleFormSubmit={this.handleFormSubmit} handleSearch={this.handleSearch} />
         </div>
         <Footer>
         </Footer>

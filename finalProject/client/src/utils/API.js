@@ -3,7 +3,7 @@ import axios from "axios";
 export default {
   // API for campsite
   getCampsite: function(q){
-    return axios.get("https://developer.nps.gov/api/v1/campgrounds?stateCode=" + q + "&api_key=fU3xD3IP652jeWEDBerlyUAWvN0uM8zcpVY932ku")
+    return axios.get("https://developer.nps.gov/api/v1/campgrounds?stateCode=" + q + "&api_key=fU3xD3IP652jeWEDBerlyUAWvN0uM8zcpVY932ku");
   },
   // Gets all Inventorys
   getInventory: function() {
