@@ -1,17 +1,17 @@
 import { applyMiddleware, createStore, combineReducers } from 'redux';
-import { promiseMiddleware } from './middleware';
+import { localStorageMiddleware, promiseMiddleware } from './middleware';
 import auth from "./reducers/auth";
-import home from "./reducers/home";
+import community from "./reducers/community";
 import common from "./reducers/common";
 
 
 const reducer = combineReducers({
   auth,
   common,
-  home
+  community
 });
 
-const middleware = applyMiddleware(promiseMiddleware);
+const middleware = applyMiddleware(promiseMiddleware, localStorageMiddleware);
 
 const store = createStore(reducer, middleware);
 

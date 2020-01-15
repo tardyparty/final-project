@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from "prop-types";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { connect } from "react-redux";
+import agent from "../utils/agent";
 
 // pages
 import Home from "../pages/home";
@@ -16,8 +19,37 @@ import Store_Glam from "../pages/store_glam";
 import Store_Solo from "../pages/store_solo";
 import { connect } from 'react-redux';
 
-function App() {
-  return (
+const mapStateToProps = state => ({
+  redirectTo: state.common.redirectTo,
+  currentUser: state.common.currentUser
+});
+
+const mapDispatchToProps = dispatch => ({
+  onLoad: (payload, token) =>
+    dispatch({ type: 'APP_LOAD', payload, token }),
+  onRedirect: () => 
+    dispatch({ type: "REDIRECT" })
+})
+
+class App extends Component {
+  UNSAFE_componentWillMount() {
+    const token = window.localStorage.getItem('jwt');
+    if (token) {
+      agent.setToken(token);
+    }
+  
+    this.props.onLoad(token ? agent.Auth.current() : null, token);
+  }
+
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    if ( nextProps.redirectTo ) {
+      // this.context.history.replace(nextProps.redirectTo);
+      this.props.onRedirect();
+    }
+  }
+  
+  render() {
+    return (
     <Router>
       <div>
         <Switch>
@@ -40,4 +72,8 @@ function App() {
   );
 }
 
-export default App;
+App.contextTypes = {
+  history: PropTypes.object.isRequired
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
