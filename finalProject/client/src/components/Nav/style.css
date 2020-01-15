@@ -46,8 +46,9 @@ a.text-nav {
 @media screen and (max-width: 1366px) {
     a.text-nav {
         color: #022B01 !important; 
-        margin-right: 87px;
+        margin-right: 80px;
         margin-left: 25px;
+        font-size: 16px !important;
     }
 }
 

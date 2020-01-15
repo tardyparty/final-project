@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import Header from "../components/Nav";
 import Footer from "../components/footer";
 import Spcar from "../components/spcar"
-import { Container, Form, Button } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 class Store_Car extends React.Component {
 

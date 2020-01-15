@@ -19,10 +19,10 @@ class HPCards extends React.Component {
 
                                         <p className="card-text">
                                             We make camping easy again with pre-packaged
-                                            </p>
-                                            <p>
-                                              gear based on your needs! 
-							                        </p>
+                                        <p>
+                                            gear based on your needs! 
+							            </p>
+                                        </p>
                                         <p>
                                             <a className="btn btn-primary" href="/store">RENT A PACKAGE</a>
                                         </p>
@@ -38,10 +38,10 @@ class HPCards extends React.Component {
                                     <div className="card-block">
 
                                         <p className="card-text">
-                                            Search for campgrounds near your area or 
-							            </p>
-                                        <p>find your next getaway!
-
+                                            Search for campgrounds near your area or
+                                        <p>
+                                            find your next getaway!
+                                        </p>
                                         </p>
                                         <p>
                                             <a className="btn btn-primary" href="/search">CAMPSITE SEARCH</a>
@@ -59,9 +59,12 @@ class HPCards extends React.Component {
 
                                         <p className="card-text">
                                             Read and share a recent camping experience 
+                                        
                                         <p>
-                                            <p>and connect with our community!
-							                        </p></p>
+                                            and connect with our community!
+							            </p>
+                                        </p>
+                                        <p>
                                             <a className="btn btn-primary" href="/community">COMMUNITY</a>
                                         </p>
                                     </div>
