@@ -3,12 +3,14 @@ import { localStorageMiddleware, promiseMiddleware } from './middleware';
 import auth from "./reducers/auth";
 import community from "./reducers/community";
 import common from "./reducers/common";
+import post from "./reducers/post";
 
 
 const reducer = combineReducers({
   auth,
   common,
-  community
+  community,
+  post
 });
 
 const middleware = applyMiddleware(promiseMiddleware, localStorageMiddleware);

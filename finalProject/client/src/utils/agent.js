@@ -31,7 +31,9 @@ const requests = {
 
 const Posts = {
     all: page => 
-        requests.get(`/posts/`)
+        requests.get(`/posts/`),
+    newPost: () =>
+        requests.post('/posts/')
 };
 
 const Auth = {

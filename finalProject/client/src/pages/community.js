@@ -14,29 +14,27 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
     onLoad: (payload) =>
         dispatch({ type: "COMMUNITY_LOADED", payload })
-})
+});
 
 class Community extends Component {
     
     UNSAFE_componentWillMount() {
         this.props.onLoad( agent.Posts.all())
-        
-        console.log(this.state);
     };
 
     render() {
         return (
-            <div>
+            <Container>
                 <Header />
                 <Container>
                     <h1 className="text-center"> Community </h1>
                     <PostForm />
-                    <Container className="text-center">
+                    <Container>
                         <PostList posts={this.props.posts} />
                     </Container>
-                    <Footer />
                 </Container>
-            </div>
+                <Footer />
+            </Container>
         )
     }
 
