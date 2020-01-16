@@ -1,5 +1,4 @@
 import React from "react";
-// import { Col, Row } from "react-bootstrap";
 import { Row, Col } from "../Grid"
 
 const SearchResult = (props) => {
@@ -26,7 +25,6 @@ const SearchResult = (props) => {
                                         id={campsite.name + "Card"} 
                                         key={campsite._id}>
                                             <Col size="1" className="emptyCol" />
-                                            {/* col-9 show information of the book */}
                                             <Col size="9" className="campInfo">
                                                 <Row>
                                                     <h3 className="campName">{campsite.name}</h3>
@@ -35,13 +33,7 @@ const SearchResult = (props) => {
                                                     <h4 className="campDescription">{campsite.description}</h4>
                                                 </Row>
                                                 <Row>
-                                                    <p className="campAmmenities">{campsite.ammenities}</p>
-                                                </Row>
-                                                <Row>
-                                                    <p className="campAccessibility">{campsite.accessibility.cellphoneinfo}</p>
-                                                </Row>
-                                                <Row>
-                                                    <p className="campDirections">{campsite.directions}</p>
+                                                    <p className="campDirections">Directions: {campsite.directions}</p>
                                                 </Row>
                                             </Col>
                                         </Row>

@@ -34,9 +34,7 @@ handleFormSubmit = event => {
                       key: result.id,
                       name: result.name,
                       description: result.description,
-                      amenities: result.amenities,
-                      accessibility: result.accessibility,
-                      directions: result.directionsoverview
+                      directions: result.directionsUrl
                   }
                   console.log(result);
                   return result;
