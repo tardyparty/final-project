@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import Header from "../components/Nav";
 import Footer from "../components/footer";
 import SearchArea from "../components/searchArea";
+import SearchResult from "../components/SearchResult";
 import { Container, Form, Button } from "react-bootstrap";
 import API from "../utils/API";
-import request from "superagent";
 
 
 class Search extends React.Component {
@@ -31,6 +31,7 @@ handleFormSubmit = event => {
               results = results.map(result => {
                   //store campsite info in a new object 
                   result = {
+                      key: result.id,
                       name: result.name,
                       description: result.description,
                       amenities: result.amenities,
@@ -57,9 +58,13 @@ handleSearch = (e) => {
     return (
       <Container>
         <Header />
-        <div>
-          <SearchArea handleFormSubmit={this.handleFormSubmit} handleSearch={this.handleSearch} />
-        </div>
+        <Container>
+              <SearchArea handleFormSubmit={this.handleFormSubmit} handleSearch={this.handleSearch} />
+        </Container>
+        <br></br>
+        <Container>
+          <SearchResult campsites={this.state.campsites} />
+        </Container>
         <Footer>
         </Footer>
       </Container>
