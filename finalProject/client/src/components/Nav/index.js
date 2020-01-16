@@ -9,7 +9,7 @@ function Header() {
         <img alt="" 
         id="logo"
         src="/images/camper_logo2.png"
-        className="d-inline-block" />{''}CAMPERS</Navbar.Brand>
+        className="d-inline-block" />{''}<b>CAMPERS</b></Navbar.Brand>
       <Navbar.Toggle className="toggle navbar-text" aria-controls="responsive-navbar-nav">Menu</Navbar.Toggle>
       <Navbar.Collapse id="responsive-navbar-nav" >
         

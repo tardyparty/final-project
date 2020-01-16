@@ -1,6 +1,11 @@
-.jumbotron {
+h2 {
     background-color: #689504 !important;
     color: #FFD75A;
     text-align: center;
     border: 5px solid #FFD75A;
+}
+
+#sc-image {
+    height: 200px;
+    width: 200px;
 }

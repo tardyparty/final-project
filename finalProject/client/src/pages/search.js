@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "../components/Nav";
 import Footer from "../components/footer";
 import SearchArea from "../components/searchArea";
+import SearchResult from "../components/SearchResult";
 import { Container, Form, Button } from "react-bootstrap";
 import API from "../utils/API";
 
@@ -25,18 +26,19 @@ handleFormSubmit = event => {
           }
           else {
               // store response in an array
-              let results = res.data
+              let results = res.data.data
               //map through the array 
               results = results.map(result => {
                   //store campsite info in a new object 
                   result = {
+                      key: result.id,
                       name: result.name,
                       description: result.description,
-                      amenities: result.amenities,
-                      accessibility: result.accessibility,
-                      directions: result.directionsoverview
+                      directions: result.directionsUrl
                   }
+                  console.log(result);
                   return result;
+                  
               })
               // reset the sate of the empty campsite array to the new arrays of objects with properties geting back from the response
               this.setState({ campsites: results, error: "" })
@@ -54,9 +56,13 @@ handleSearch = (e) => {
     return (
       <Container>
         <Header />
-        <div>
-          <SearchArea handleFormSubmit={this.handleFormSubmit} handleSearch={this.handleSearch} />
-        </div>
+        <Container>
+              <SearchArea handleFormSubmit={this.handleFormSubmit} handleSearch={this.handleSearch} />
+        </Container>
+        <br></br>
+        <Container>
+          <SearchResult campsites={this.state.campsites} />
+        </Container>
         <Footer>
         </Footer>
       </Container>

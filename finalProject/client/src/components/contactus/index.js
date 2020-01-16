@@ -16,7 +16,7 @@ class ContactUs extends React.Component {
                         </div>
                         <div class="col-md-6">
                             <img id="contact-image" alt="Bootstrap Image Preview" src="/images/CP_1.jpeg" />
-                            <p id="contact-text">Need help or more information or just want to let us know how were doing? Fill out the below information and we will be in touch!</p>
+                            <p id="contact-text"><strong>Need help or more information or just want to let us know how were doing? Fill out the below information and we will be in touch!</strong></p>
                             <div className="form-group">
                                 <label for="firstName">First Name</label>
                                 <input type="text" class="form-control" id="firstName" placeholder="Enter your First Name"></input>
@@ -28,7 +28,7 @@ class ContactUs extends React.Component {
                                 <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                             </div>
                             <Button variant="primary" type="submit">
-                                Submit
+                                SUBMIT
                             </Button>
                         </div>
                         <div class="col-md-3">
