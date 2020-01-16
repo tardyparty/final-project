@@ -18,36 +18,45 @@ class SPCards extends React.Component {
 
 
                                         <p className="card-text">
-                                            For the Overnight Car Camper. This package includes the following:
+                                            <b>For the Overnight Car Camper. This package includes the following:</b>
 							            </p>
                                         <ul>
                                             <li class="list-item">
-                                                1 - 2 Person Lightweight Backpacking Tent
+                                                1 4 Person Tent
 				                            </li>
                                             <li class="list-item">
-                                                Consectetur adipiscing elit
+                                                2 Sleeping Bags 
 				                            </li>
                                             <li class="list-item">
-                                                Integer molestie lorem at massa
+                                                2 Sleeping Pads 
 				                            </li>
                                             <li class="list-item">
-                                                Facilisis in pretium nisl aliquet
+                                                2 Camp Pillows
 				                            </li>
                                             <li class="list-item">
-                                                Nulla volutpat aliquam velit
+                                                1 Camp Table
 				                            </li>
                                             <li class="list-item">
-                                                Faucibus porta lacus fringilla vel
+                                                2 Camp Chairs
 				                            </li>
                                             <li class="list-item">
-                                                Aenean sit amet erat nunc
+                                                2 Rechargeable Headlamps 
 				                            </li>
                                             <li class="list-item">
-                                                Eget porttitor lorem
+                                                1 Electric Lantern 
+				                            </li>
+                                            <li class="list-item">
+                                                1 2-Burner Camp Stove (fuel sold separately) 
+				                            </li>
+                                            <li class="list-item">
+                                                1 Camp Cook Set 
+				                            </li>
+                                            <li class="list-item">
+                                                1 Cooler 
 				                            </li>
                                         </ul>
                                         <p>
-                                            <a className="btn btn-primary" href="/store_car">Rent Yours Today!</a>
+                                            <a className="btn btn-primary" href="/store_car">RENT YOURS TODAY!</a>
                                         </p>
                                     </div>
                                 </div>
@@ -62,36 +71,57 @@ class SPCards extends React.Component {
 
 
                                         <p className="card-text">
-                                            For the Camper who enjoys comfort even more than they love the outdoors. This package included the follwoing:
+                                            <b>For the Camper who enjoys comfort even more than they love the outdoors. This package includes the following:</b>
 							            </p>
                                         <ul>
                                             <li class="list-item">
-                                                Lorem ipsum dolor sit amet
+                                                1 6 Person Tent plus Mud Room and Porch
 				                            </li>
                                             <li class="list-item">
-                                                Consectetur adipiscing elit
+                                                2 Air Bed Mattresses 
 				                            </li>
                                             <li class="list-item">
-                                                Integer molestie lorem at massa
+                                                2 Camping Cots 
 				                            </li>
                                             <li class="list-item">
-                                                Facilisis in pretium nisl aliquet
+                                                1 Camp Table 
 				                            </li>
                                             <li class="list-item">
-                                                Nulla volutpat aliquam velit
+                                                2 Deluxe Camp Chairs 
 				                            </li>
                                             <li class="list-item">
-                                                Faucibus porta lacus fringilla vel
+                                                2 Hammocks 
 				                            </li>
                                             <li class="list-item">
-                                                Aenean sit amet erat nunc
+                                                2 Rechargeable Headlamps 
 				                            </li>
                                             <li class="list-item">
-                                                Eget porttitor lorem
+                                                1 Electric Lantern 
+				                            </li>
+                                            <li class="list-item">
+                                                1 Jetboil 2-Burner Camp Stove (fuel sold separately)
+				                            </li>
+                                            <li class="list-item">
+                                                Stansport Enamel Camping Table Set 
+				                            </li>
+                                            <li class="list-item">
+                                                Camp Chef Outdoor Camping Oven 
+				                            </li>
+                                            <li class="list-item">
+                                                Ozark Trail Shower Changing Tent 
+				                            </li>
+                                            <li class="list-item">
+                                                1 Stainless-Steel 12-Cup Coffee Percolator 
+				                            </li>
+                                            <li class="list-item">
+                                                1 Cooler
+				                            </li>
+                                            <li class="list-item">
+                                                Solar Phone / Device Charger Portable Giant Movie Screen
 				                            </li>
                                         </ul>
                                         <p>
-                                            <a className="btn btn-primary" href="/store_glam">Rent Yours Today!</a>
+                                            <a className="btn btn-primary" href="/store_glam">RENT YOURS TODAY!</a>
                                         </p>
                                     </div>
                                 </div>
@@ -105,36 +135,42 @@ class SPCards extends React.Component {
                                     <div className="card-block">
 
                                         <p className="card-text">
-                                            For the Camper couple or friends who just want to get away together. This package includes the following:
+                                            <b>For the Camper couple or friends who just want to get away together. This package includes the following:</b>
 							            </p>
                                         <ul>
                                             <li class="list-item">
-                                                Lorem ipsum dolor sit amet
+                                                1 The North Face Talus 4 Person Tent
 				                            </li>
                                             <li class="list-item">
-                                                Consectetur adipiscing elit
+                                                1 The North Face Dolomite Double Sleeping Bag (20 Degree) 
 				                            </li>
                                             <li class="list-item">
-                                                Integer molestie lorem at massa
+                                                1 Exped Sim Comfort Duo Sleeping Pad
 				                            </li>
                                             <li class="list-item">
-                                                Facilisis in pretium nisl aliquet
+                                                1 Electric Lantern
 				                            </li>
                                             <li class="list-item">
-                                                Nulla volutpat aliquam velit
+                                            1 Jetboil 2-Burner Camp Stove (fuel sold separately)
 				                            </li>
                                             <li class="list-item">
-                                                Faucibus porta lacus fringilla vel
+                                                1 Hiker or Backpacker Cookware for 2 
 				                            </li>
                                             <li class="list-item">
-                                                Aenean sit amet erat nunc
+                                                1 Camp Table 
 				                            </li>
                                             <li class="list-item">
-                                                Eget porttitor lorem
+                                                2 Camp Chairs
+				                            </li>
+                                            <li class="list-item">
+                                                1 Cooler
+				                            </li>
+                                            <li class="list-item">
+                                                2 LED Flashlight/Lanterns 
 				                            </li>
                                         </ul>
                                         <p>
-                                            <a className="btn btn-primary" href="/store_couple">Rent Yours Today!</a>
+                                            <a className="btn btn-primary" href="/store_couple">RENT YOURS TODAY!</a>
                                         </p>
                                     </div>
                                 </div>
@@ -148,36 +184,42 @@ class SPCards extends React.Component {
                                     <div className="card-block">
 
                                         <p className="card-text">
-                                            For the Camper who is at one with nature. This package includes the following:
+                                            <b>For the Camper who is at one with nature. This package includes the following:</b>
 							            </p>
                                         <ul>
                                             <li class="list-item">
-                                                Lorem ipsum dolor sit amet
+                                                1 2-Person Lightweight Backpacking Tent
 				                            </li>
                                             <li class="list-item">
-                                                Consectetur adipiscing elit
+                                                1 Lightweight Backpack
 				                            </li>
                                             <li class="list-item">
-                                                Integer molestie lorem at massa
+                                                1 Lightweight Sleeping Bag
 				                            </li>
                                             <li class="list-item">
-                                                Facilisis in pretium nisl aliquet
+                                                1 Lightweight Backpacking Sleeping Pad
 				                            </li>
                                             <li class="list-item">
-                                                Nulla volutpat aliquam velit
+                                                1 Backpacking Pillow
 				                            </li>
                                             <li class="list-item">
-                                                Faucibus porta lacus fringilla vel
+                                                1 Lightweight Camp Chair 
 				                            </li>
                                             <li class="list-item">
-                                                Aenean sit amet erat nunc
+                                                1 Pair of Carbon Trekking Poles 
 				                            </li>
                                             <li class="list-item">
-                                                Eget porttitor lorem
+                                                1 Rechargeable Headlamps 
+				                            </li>
+                                            <li class="list-item">
+                                                1 MSR Pocket Rocket Stove Kit (fuel sold separately) 
+				                            </li>
+                                            <li class="list-item">
+                                                1 Gravity Water Filter 
 				                            </li>
                                         </ul>
                                         <p>
-                                            <a className="btn btn-primary" href="/store_solo">Rent Yours Today!</a>
+                                            <a className="btn btn-primary" href="/store_solo">RENT YOURS TODAY!</a>
                                         </p>
                                     </div>
                                 </div>

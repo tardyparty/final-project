@@ -1,10 +1,11 @@
 #contact-image {
-    /* height: 100px; */
+    height: 400px;
     width: 100%
+    
 }
 
 #contact-text {
-    float: left;
+    font-size: x-large;
 }
 
 .form-group {
