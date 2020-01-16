@@ -7,7 +7,7 @@ import { Container, Form, Button } from "react-bootstrap";
 import API from "../utils/API";
 
 
-class Search extends React.Component {
+class Search extends Component {
   constructor(props){
     super(props);
     this.state = {

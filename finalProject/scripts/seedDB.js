@@ -171,6 +171,24 @@ const postSeed = [
     },
     body: "Where should I go camping close to Nashville?",
     comments: [
+      {
+        author: {
+          username: "glampGirl"
+        },
+        body: "I like percy warner if I only have a couple hours"
+      },
+      {
+        author: {
+          username: "tardyparty"
+        },
+        body: "ok cool, I haven't been there yet!"
+      },
+      {
+        author: {
+          username: "NashDog43"
+        },
+        body: "there are tons of pretty good trails in the city and lots more if you drive a little"
+      }
     ]
   },
   {
@@ -181,6 +199,24 @@ const postSeed = [
     },
     body: "Does anyone want to go day hiking at Percy Warner?",
     comments: [
+      {
+        author: {
+          username: "glampGirl"
+        },
+        body: "ALWAYS DOWN"
+      },
+      {
+        author: {
+          username: "aHikeADay"
+        },
+        body: "let's do the red trail. I think its like 4 miles-ish"
+      },
+      {
+        author: {
+          username: "NashDog43"
+        },
+        body: "I'll bring my dog, he loves that trail!"
+      }
     ]
   }
 ]

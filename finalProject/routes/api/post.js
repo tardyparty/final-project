@@ -5,7 +5,7 @@ var Comment = mongoose.model('Comment');
 var User = mongoose.model('User');
 var auth = require('../auth');
 
-// Preload article objects on routes with ':article'
+// Preload post objects on routes with ':post'
 router.param('post', function(req, res, next, id) {
   Post.findOne({ id: _id})
     .populate('author')
@@ -43,99 +43,6 @@ router.get('/', auth.optional, function(req, res, next) {
   .catch(next);
 });
 
-
-  // var query = {};
-  // var limit = 20;
-  // var offset = 0;
-
-  // if(typeof req.query.limit !== 'undefined'){
-  //   limit = req.query.limit;
-  // }
-
-  // if(typeof req.query.offset !== 'undefined'){
-  //   offset = req.query.offset;
-  // }
-
-  // // if( typeof req.query.tag !== 'undefined' ){
-  // //   query.tagList = {"$in" : [req.query.tag]};
-  // // }
-
-  // Promise.all([
-  //   req.query.author ? User.findOne({username: req.query.author}) : null
-  // ]).then(function(results){
-  //   var author = results[0];
-  //   console.log(results, "promise.all BE Get");
-
-  //   if(author){
-  //     query.author = author._id;
-  //   }
-
-  //   // if(favoriter){
-  //   //   query._id = {$in: favoriter.favorites};
-  //   // } else if(req.query.favorited){
-  //   //   query._id = {$in: []};
-  //   // }
-
-  //   return Promise.all([
-  //     Post.find(query)
-  //       .limit(Number(limit))
-  //       .skip(Number(offset))
-  //       .sort({createdAt: 'desc'})
-  //       .populate('author')
-  //       .exec(),
-  //     Post.count(query).exec(),
-  //     req.payload ? User.findById(req.payload.id) : null,
-  //   ]).then(function(results){
-  //     var posts = results[0];
-  //     var postsCount = results[1];
-  //     var user = results[2];
-
-  //     return res.json({
-  //       posts: posts.map(function(post){
-  //         return post.toJSONFor(user);
-  //       }),
-  //       postsCount: postsCount
-  //     });
-  //   });
-  // }).catch(next);
-// });
-
-// router.get('/feed', auth.required, function(req, res, next) {
-//   var limit = 20;
-//   var offset = 0;
-
-//   if(typeof req.query.limit !== 'undefined'){
-//     limit = req.query.limit;
-//   }
-
-//   if(typeof req.query.offset !== 'undefined'){
-//     offset = req.query.offset;
-//   }
-
-//   User.findById(req.payload.id).then(function(user){
-//     if (!user) { return res.sendStatus(401); }
-
-//     Promise.all([
-//       Post.find({ author: {$in: user.following}})
-//         .limit(Number(limit))
-//         .skip(Number(offset))
-//         .populate('author')
-//         .exec(),
-//       Article.count({ author: {$in: user.following}})
-//     ]).then(function(results){
-//       var articles = results[0];
-//       var articlesCount = results[1];
-
-//       return res.json({
-//         articles: articles.map(function(article){
-//           return article.toJSONFor(user);
-//         }),
-//         articlesCount: articlesCount
-//       });
-//     }).catch(next);
-//   });
-// });
-
 router.post('/', auth.required, function(req, res, next) {
   User.findById(req.payload.id).then(function(user){
     if (!user) { return res.sendStatus(401); }
@@ -145,7 +52,6 @@ router.post('/', auth.required, function(req, res, next) {
     post.author = user;
 
     return post.save().then(function(){
-      console.log(post.author);
       return res.json({post: post.toJSONFor(user)});
     });
   }).catch(next);
@@ -227,6 +133,7 @@ router.get('/:post/comments', auth.optional, function(req, res, next){
     });
   }).catch(next);
 });
+
 
 // create a new comment
 router.post('/:post/comments', auth.required, function(req, res, next) {

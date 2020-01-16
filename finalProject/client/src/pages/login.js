@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Header from "../components/Nav";
 import Footer from "../components/footer";
+import { Container } from "react-bootstrap";
 import ListErrors from "../components/listErrors";
 import agent from "../utils/agent";
 
@@ -32,22 +33,22 @@ class Login extends React.Component {
     const { email, password } = this.props;
 
     return (
-      <div className="auth-page">
-        <Header />
+      <Container>
+      <Header />
+      <div className="auth-page container-fluid">
         <div className="container page">
           <div className="row">
 
             <div className="col-md-6 offset-md-3 col-xs-12">
-              <h1 className="text-xs-center">Sign In</h1>
-              <p className="text-xs-center">
+              <h3 className="text-xs-center text-center">
                 <a href="/register">
                   Need an account? Register Here
                 </a>
-              </p>
+              </h3>
 
               <ListErrors errors={this.props.errors} />
 
-              <form onSubmit={this.submitForm(email, password)}>
+              <form onSubmit={this.submitForm(email, password)} className="text-center">
                 <fieldset>
 
                   <fieldset className="form-group">
@@ -81,8 +82,9 @@ class Login extends React.Component {
 
           </div>
         </div>
-        <Footer />
       </div>
+      <Footer />
+      </Container>
     );
   }
 }

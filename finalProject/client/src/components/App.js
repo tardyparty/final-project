@@ -42,7 +42,7 @@ class App extends Component {
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     if ( nextProps.redirectTo ) {
-      // this.context.history.replace(nextProps.redirectTo);
+      // this.context.router.replace(nextProps.redirectTo);
       this.props.onRedirect();
     }
   }
@@ -73,7 +73,7 @@ class App extends Component {
 }
 
 App.contextTypes = {
-  history: PropTypes.object.isRequired
+  router: PropTypes.object.isRequired
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
