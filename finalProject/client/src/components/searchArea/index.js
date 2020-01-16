@@ -2,12 +2,6 @@ import React from "react";
 
 const SearchArea = (props) => {
     return(
-        // <div className="search-area">
-        //     <form action="">
-        //         <input onChange={props.handleSearch} type="text"/>
-        //         <button type="submit">Search</button>
-        //     </form>
-        // </div>
         <form>
             <div className="form-group">
                 <label className="search-area"><h3> Search by State</h3></label>
