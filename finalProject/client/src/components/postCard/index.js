@@ -5,13 +5,14 @@ import { Card, Container } from "react-bootstrap";
 const PostCard = props => {
 
     const post = props.post;
-    const comments = post.comments;
+
+    console.log(post);
 
     return (
         <Container>
             <Card>
                 <Card.Title>
-                    {/* { post.author.username } */}
+                    {/* {post.author } */}
                     {/* <span className="date">
                         {new Date(post.createdAt).toDateString()}
                     </span> */}
@@ -20,11 +21,11 @@ const PostCard = props => {
                     <h1>{ post.body }</h1>
                     <Container>
                         <ul>
-                        { comments.map( comment => {
+                        { post.comments.map( comment => {
                             return (
                                 <li>
-                                    <h2> { comment.author.username } </h2>
-                                    <p> { comment.body } </p>
+                                    {/* <h2> { comment.author.username } </h2> */}
+                                    <p> · { comment.body } </p>
                                     {/* <span className="date">
                                         {new Date(comment.createdAt).toDateString()}
                                     </span> */}

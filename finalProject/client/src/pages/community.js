@@ -24,10 +24,10 @@ class Community extends Component {
 
     render() {
         return (
-            <Container>
+            <Container className="container-fluid">
                 <Header />
                 <Container>
-                    <h1 className="text-center"> Community </h1>
+                    <h3 className="text-center"> Community </h3>
                     <PostForm />
                     <Container>
                         <PostList posts={this.props.posts} />

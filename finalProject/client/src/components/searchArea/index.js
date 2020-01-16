@@ -1,6 +1,6 @@
 import React from "react";
 
-const searchArea = (props) => {
+const SearchArea = (props) => {
     return(
         <div className="search-area">
             <form action="">
@@ -11,4 +11,4 @@ const searchArea = (props) => {
     )
 }
 
-export default searchArea;
+export default SearchArea;

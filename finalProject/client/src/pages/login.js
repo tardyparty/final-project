@@ -35,7 +35,7 @@ class Login extends React.Component {
     return (
       <Container>
       <Header />
-      <div className="auth-page">
+      <div className="auth-page container-fluid">
         <div className="container page">
           <div className="row">
 

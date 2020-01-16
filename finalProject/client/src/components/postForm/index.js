@@ -2,36 +2,45 @@ import React, { Component } from "react";
 import { Form, Button, Container } from "react-bootstrap";
 import agent from "../../utils/agent";
 import { connect } from "react-redux";
+import ListErrors from "../listErrors";
 
 const mapStateToProps = state => ({ ...state.post });
 
 const mapDispatchToProps = dispatch => ({
-  onChangeBody: value =>
-    dispatch({ type: 'UPDATE_FIELD_POST', key: 'body', value }),
-  onSubmit: (body) => {
-    const payload = agent.Posts.newPost(body);
-    console.log("POST_POST", payload);
-    dispatch({ type: 'POST_POST', payload })
-  }
+    onUpdateField: (key, value) =>
+        dispatch({ type: 'UPDATE_FIELD_POST', key, value }),
+    onSubmit: payload => {
+        dispatch({ type: 'CREATE_POST', payload })
+    }
 });
 
 class PostForm extends Component {
     constructor(props) {
         super(props);
-        this.changeBody = event => this.props.onChangeBody(event.target.value);
-        this.submitForm = (body) => event => {
-            event.preventDefault();
-            this.props.onSubmit(body);
+        const updateFieldEvent =
+            key => ev => this.props.onUpdateField(key, ev.target.value);
+        this.changeBody = updateFieldEvent('body');
+        this.submitForm = () => {
+            // ev.preventDefault();
+
+            const post = {
+                body: this.props.body
+            };
+
+            const promise = agent.Posts.create(post);
+
+            this.props.onSubmit(promise)
         }
     }
 
     render() {
-        const { body } = this.props;
+        // const { body } = this.props;
 
         return (
             <Container>
                 <div className="posts">
-                    <form onSubmit={ this.submitForm(body) } className="text-center">
+                <ListErrors errors={this.props.errors}></ListErrors>
+                    <form className="text-center">
                         <fieldset>
                             <fieldset className="form-group">
                                 <input
@@ -45,7 +54,8 @@ class PostForm extends Component {
                             <button
                                 className="btn btn-lg btn-primary pull-xs-right"
                                 type="submit"
-                                disabled={this.props.inProgress}>
+                                disabled={this.props.inProgress}
+                                onClick={ this.submitForm}>
                                 Share
                             </button>
                         </fieldset>

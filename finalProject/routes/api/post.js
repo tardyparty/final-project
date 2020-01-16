@@ -5,7 +5,7 @@ var Comment = mongoose.model('Comment');
 var User = mongoose.model('User');
 var auth = require('../auth');
 
-// Preload article objects on routes with ':article'
+// Preload post objects on routes with ':post'
 router.param('post', function(req, res, next, id) {
   Post.findOne({ id: _id})
     .populate('author')
@@ -52,7 +52,6 @@ router.post('/', auth.required, function(req, res, next) {
     post.author = user;
 
     return post.save().then(function(){
-      console.log(post.author);
       return res.json({post: post.toJSONFor(user)});
     });
   }).catch(next);
@@ -134,6 +133,7 @@ router.get('/:post/comments', auth.optional, function(req, res, next){
     });
   }).catch(next);
 });
+
 
 // create a new comment
 router.post('/:post/comments', auth.required, function(req, res, next) {

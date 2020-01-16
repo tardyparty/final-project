@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import Header from "../components/Nav";
 import Footer from "../components/footer";
-import searchArea from "../components/searchArea";
+import SearchArea from "../components/searchArea";
 import { Container, Form, Button } from "react-bootstrap";
 import API from "../utils/API";
 
 
-class Search extends React.Component {
+class Search extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -55,7 +55,7 @@ handleSearch = (e) => {
       <Container>
         <Header />
         <div>
-          <searchArea handleFormSubmit={this.handleFormSubmit} handleSearch={this.handleSearch} />
+          <SearchArea handleFormSubmit={this.handleFormSubmit} handleSearch={this.handleSearch} />
         </div>
         <Footer>
         </Footer>

@@ -1,6 +1,6 @@
 export default (state = {}, action) => {
     switch (action.type) {
-        case "POST_POST":
+        case "CREATE_POST":
             return {
                 ...state,
                 inProgress: false,

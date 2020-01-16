@@ -37,7 +37,7 @@ class Register extends React.Component {
     const { email, username, password } = this.props;
 
     return (
-      <div className="auth-page">
+      <div className="auth-page container-fluid">
         <Nav />
         <div className="container page">
           <div className="row">
