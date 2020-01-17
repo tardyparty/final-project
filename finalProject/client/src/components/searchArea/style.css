@@ -1,0 +1,23 @@
+.camp_search-image {
+    height: 400px;
+    width: 100%;
+}
+
+h3 {
+    padding-left: 20px;
+}
+
+form {
+    text-align: center;
+}
+
+
+
+.submitBtn {
+    text-align: center !important;
+    background-color: #406E84 !important;
+    display: inline-block;
+    color: #E9C4A9 !important;
+    margin: 0 auto;
+    padding-left: 20px;
+}
