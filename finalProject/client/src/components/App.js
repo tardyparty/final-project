@@ -31,6 +31,10 @@ const mapDispatchToProps = dispatch => ({
 })
 
 class App extends Component {
+  // static propTypes = {
+  //   router: PropTypes.object.isRequired
+  // };
+
   UNSAFE_componentWillMount() {
     const token = window.localStorage.getItem('jwt');
     if (token) {
@@ -40,12 +44,12 @@ class App extends Component {
     this.props.onLoad(token ? agent.Auth.current() : null, token);
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    if ( nextProps.redirectTo ) {
-      // this.context.router.replace(nextProps.redirectTo);
-      this.props.onRedirect();
-    }
-  }
+  // UNSAFE_componentWillReceiveProps(nextProps) {
+  //   if ( nextProps.redirectTo ) {
+  //     this.context.router.replace(nextProps.redirectTo);
+  //     this.props.onRedirect();
+  //   }
+  // }
   
   render() {
     return (
@@ -71,9 +75,5 @@ class App extends Component {
     );
   }
 }
-
-App.contextTypes = {
-  router: PropTypes.object.isRequired
-};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
