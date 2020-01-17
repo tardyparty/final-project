@@ -13,7 +13,7 @@ class HPCards extends React.Component {
                                     <h5 className="card-title">
                                         Find Your Adventure
                                                 </h5>
-                                    <img className="hp_image" alt="Bootstrap Thumbnail First" src="/images/HP_packages.jpeg" />
+                                    <img className="hp_image text-center" alt="Bootstrap Thumbnail First" src="/images/HP_packages.jpeg" />
                                     <div className="card-block">
 
 
@@ -34,7 +34,7 @@ class HPCards extends React.Component {
                                     <h5 className="card-title">
                                         Find Your Spot
 							                </h5>
-                                    <img className="hp_image" alt="Bootstrap Thumbnail Second" src="/images/HP_spots.jpeg" />
+                                    <img className="hp_image text-center" alt="Bootstrap Thumbnail Second" src="/images/HP_spots.jpeg" />
                                     <div className="card-block">
 
                                         <p className="card-text">
@@ -54,7 +54,7 @@ class HPCards extends React.Component {
                                     <h5 className="card-title">
                                         Find Campers Experiences
 							                </h5>
-                                    <img className="hp_image" alt="Bootstrap Thumbnail Third" src="/images/HP_camp.jpeg" />
+                                    <img className="hp_image text-center" alt="Bootstrap Thumbnail Third" src="/images/HP_camp.jpeg" />
                                     <div className="card-block">
 
                                         <p className="card-text">

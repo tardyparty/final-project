@@ -13,10 +13,10 @@ function Header() {
       <Navbar.Toggle className="toggle navbar-text" aria-controls="responsive-navbar-nav">Menu</Navbar.Toggle>
       <Navbar.Collapse id="responsive-navbar-nav" >
         
-        <Nav className="mr-auto">
+        <Nav className="md-auto">
           <Nav.Link className="text-nav md-auto" href="/store">Store</Nav.Link>
           <Nav.Link className="text-nav md-auto" href="/search">Find Campgrounds</Nav.Link>
-          <Nav.Link className="text-nav md-auto" href="/blog">Blog</Nav.Link>
+          {/* <Nav.Link className="text-nav mr-auto" href="/blog">Blog</Nav.Link> */}
           <Nav.Link className="text-nav md-auto" href="/contact">Contact Us</Nav.Link>
           <Nav.Link className="text-nav md-auto" href="/community">Community</Nav.Link>
           <Nav.Link className="text-nav md-auto" href="/login">Login</Nav.Link>
