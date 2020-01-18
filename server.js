@@ -2,7 +2,6 @@ const http = require('http'),
     path = require('path'),
     methods = require('methods'),
     express = require('express'),
-    bodyParser = require('body-parser'),
     session = require('express-session'),
     cors = require('cors'),
     passport = require('passport'),
@@ -18,8 +17,8 @@ app.use(cors());
 
 // Normal express config defaults
 app.use(require('morgan')('dev'));
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 app.use(require('method-override')());
 
