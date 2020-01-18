@@ -9,7 +9,7 @@ const http = require('http'),
     errorhandler = require('errorhandler'),
     mongoose = require('mongoose');
 
-var isProduction = process.env.NODE_ENV === 'development';
+var isProduction = process.env.NODE_ENV === 'production';
 
 // Create global app object
 var app = express();
@@ -22,7 +22,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(require('method-override')());
-app.use(express.static(__dirname + '/public'));
+
+if (isProduction) {
+  app.use(express.static("client/build"));
+}
 
 app.use(session({ secret: 'campers', cookie: { maxAge: 60000 }, resave: false, saveUninitialized: false  }));
 
@@ -30,12 +33,9 @@ if (!isProduction) {
   app.use(errorhandler());
 }
 
-if(isProduction){
-  mongoose.connect(process.env.MONGODB_URI);
-} else {
-  mongoose.connect('mongodb://localhost/final-projectDB');
-  mongoose.set('debug', true);
-}
+
+mongoose.connect('mongodb://tardy:4510keds@ds155087.mlab.com:55087/heroku_0drnmt3q');
+  
 
 require('./models/user');
 require('./models/posts');
